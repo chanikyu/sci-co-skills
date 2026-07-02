@@ -27,9 +27,9 @@
 
 | 스킬 | 기능 |
 |---|---|
-| 🧬 **[amplicon-analysis](../skills/amplicon-analysis)** | 16S/ITS 마이크로바이옴 파이프라인 — 전처리 → **알파** & **베타** 다양성(거리, PCoA, PERMANOVA) → **차등 존재비** — 논문용 그림 포함. scikit-bio 기반이며, 그림은 `scientific-data-viz`를 재사용합니다. |
-| 📊 **[scientific-data-viz](../skills/scientific-data-viz)** | 실제 데이터로 만드는 논문 품질의 저널 그림 — 코드로 렌더링되어 모든 값이 정확합니다. 20종 팔레트, 범례 외부 배치, 선택적 통계(t / ANOVA / Mann–Whitney / Kruskal / 상관 / log-rank / **PERMANOVA**), 구조화된 `images/` + `script/` 출력. |
-| 🧫 **[scientific-workflow-viz](../skills/scientific-workflow-viz)** | BioRender 스타일의 **개념도 이미지 프롬프트**(워크플로우 / 메커니즘 / 비교)이며, Google **Nano Banana**(Gemini 이미지 API)를 통한 직접 렌더링을 선택적으로 지원합니다. |
+| 🧬 **[amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)** | 16S/ITS 마이크로바이옴 파이프라인 — 전처리 → **알파** & **베타** 다양성(거리, PCoA, PERMANOVA) → **차등 존재비** — 논문용 그림 포함. scikit-bio 기반이며, 그림은 `scientific-data-viz`를 재사용합니다. |
+| 📊 **[scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)** | 실제 데이터로 만드는 논문 품질의 저널 그림 — 코드로 렌더링되어 모든 값이 정확합니다. 20종 팔레트, 범례 외부 배치, 선택적 통계(t / ANOVA / Mann–Whitney / Kruskal / 상관 / log-rank / **PERMANOVA**), 구조화된 `images/` + `script/` 출력. |
+| 🧫 **[scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)** | BioRender 스타일의 **개념도 이미지 프롬프트**(워크플로우 / 메커니즘 / 비교)이며, Google **Nano Banana**(Gemini 이미지 API)를 통한 직접 렌더링을 선택적으로 지원합니다. |
 
 ## 🚀 설치
 
@@ -54,7 +54,7 @@
 
 다양성/PCoA/PERMANOVA에는 **scikit-bio**를 사용하며, 그림과 전체 이름 표기 통계 주석은 `scientific-data-viz`를 재사용합니다. 설계 자체가 정직합니다: 방법과 임계값을 명시하고, 다중 검정을 보정하며, 희석화는 선택 사항이자 보고 대상입니다.
 
-→ 전체 가이드: [`skills/amplicon-analysis`](../skills/amplicon-analysis)
+→ 전체 가이드: [`amplicon-analysis`](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)
 
 ---
 
@@ -74,7 +74,7 @@
 <img src="../assets/palettes.png" width="66%" alt="Palettes"/>
 </div>
 
-→ 전체 가이드: [`skills/scientific-data-viz`](../skills/scientific-data-viz)
+→ 전체 가이드: [`scientific-data-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)
 
 ---
 
@@ -84,7 +84,7 @@ BioRender 스타일의 **개념도 이미지 프롬프트** — 워크플로우,
 
 배경 데이터가 없는 도식/다이어그램에는 이 스킬을, 실제 데이터를 플롯할 때는 `scientific-data-viz`를 사용하세요.
 
-→ 전체 가이드: [`skills/scientific-workflow-viz`](../skills/scientific-workflow-viz)
+→ 전체 가이드: [`scientific-workflow-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)
 
 ---
 

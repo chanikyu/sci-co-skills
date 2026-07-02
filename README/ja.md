@@ -27,9 +27,9 @@
 
 | スキル | 機能 |
 |---|---|
-| 🧬 **[amplicon-analysis](../skills/amplicon-analysis)** | 16S/ITS マイクロバイオームパイプライン — 前処理 → **アルファ** 多様性と **ベータ** 多様性（距離、PCoA、PERMANOVA）→ **示差存在量** — ジャーナル品質の図付き。scikit-bio を利用し、図には `scientific-data-viz` を再利用します。 |
-| 📊 **[scientific-data-viz](../skills/scientific-data-viz)** | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 のパレット、凡例の外側配置、任意の統計（t / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
-| 🧫 **[scientific-workflow-viz](../skills/scientific-workflow-viz)** | BioRender スタイルの **コンセプト図イメージプロンプト**（ワークフロー / メカニズム / 比較）。Google の **Nano Banana**（Gemini image API）による直接描画も任意で可能です。 |
+| 🧬 **[amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)** | 16S/ITS マイクロバイオームパイプライン — 前処理 → **アルファ** 多様性と **ベータ** 多様性（距離、PCoA、PERMANOVA）→ **示差存在量** — ジャーナル品質の図付き。scikit-bio を利用し、図には `scientific-data-viz` を再利用します。 |
+| 📊 **[scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)** | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 のパレット、凡例の外側配置、任意の統計（t / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
+| 🧫 **[scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)** | BioRender スタイルの **コンセプト図イメージプロンプト**（ワークフロー / メカニズム / 比較）。Google の **Nano Banana**（Gemini image API）による直接描画も任意で可能です。 |
 
 ## 🚀 インストール
 
@@ -54,7 +54,7 @@
 
 多様性 / PCoA / PERMANOVA には **scikit-bio** を使用し、図と正式名称付きの統計注釈には `scientific-data-viz` を再利用します。誠実さを設計思想としています: 手法としきい値を明示し、多重検定を補正し、レアファクションはオプトインで報告されます。
 
-→ 完全ガイド: [`skills/amplicon-analysis`](../skills/amplicon-analysis)
+→ 完全ガイド: [`amplicon-analysis`](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)
 
 ---
 
@@ -74,7 +74,7 @@
 <img src="../assets/palettes.png" width="66%" alt="Palettes"/>
 </div>
 
-→ 完全ガイド: [`skills/scientific-data-viz`](../skills/scientific-data-viz)
+→ 完全ガイド: [`scientific-data-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)
 
 ---
 
@@ -84,7 +84,7 @@ BioRender スタイルの **コンセプト図イメージプロンプト** — 
 
 これは（背後にデータのない）模式図 / 図解に使用します。実データをプロットするには `scientific-data-viz` を使用してください。
 
-→ 完全ガイド: [`skills/scientific-workflow-viz`](../skills/scientific-workflow-viz)
+→ 完全ガイド: [`scientific-workflow-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)
 
 ---
 

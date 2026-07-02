@@ -27,9 +27,9 @@ Describe your data in natural language and Claude runs the right skill —
 
 | Skill | What it does |
 |---|---|
-| 🧬 **[amplicon-analysis](skills/amplicon-analysis)** | 16S/ITS microbiome pipeline — preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Powered by scikit-bio; reuses `scientific-data-viz` for the figures. |
-| 📊 **[scientific-data-viz](skills/scientific-data-viz)** | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
-| 🧫 **[scientific-workflow-viz](skills/scientific-workflow-viz)** | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
+| 🧬 **[amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)** | 16S/ITS microbiome pipeline — preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Powered by scikit-bio; reuses `scientific-data-viz` for the figures. |
+| 📊 **[scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)** | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
+| 🧫 **[scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)** | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
 
 ## 🚀 Installation
 
@@ -59,7 +59,7 @@ Diversity/PCoA/PERMANOVA use **scikit-bio**; figures and full-name stat annotati
 `scientific-data-viz`. Honest by design: methods and thresholds stated, multiple testing
 corrected, rarefaction opt-in and reported.
 
-→ Full guide: [`skills/amplicon-analysis`](skills/amplicon-analysis)
+→ Full guide: [`amplicon-analysis`](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)
 
 ---
 
@@ -81,7 +81,7 @@ vector PDF plus a reproducible script.
 <img src="assets/palettes.png" width="66%" alt="Palettes"/>
 </div>
 
-→ Full guide: [`skills/scientific-data-viz`](skills/scientific-data-viz)
+→ Full guide: [`scientific-data-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)
 
 ---
 
@@ -95,7 +95,7 @@ layout. **Optionally** render the prompt straight to an image with Google **Nano
 
 Use this for schematics/diagrams (no data behind them); use `scientific-data-viz` to plot real data.
 
-→ Full guide: [`skills/scientific-workflow-viz`](skills/scientific-workflow-viz)
+→ Full guide: [`scientific-workflow-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)
 
 ---
 

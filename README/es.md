@@ -27,9 +27,9 @@ resultados científicos **renderizados por código, exactos y honestos** (divers
 
 | Skill | Qué hace |
 |---|---|
-| 🧬 **[amplicon-analysis](../skills/amplicon-analysis)** | Pipeline de microbioma 16S/ITS — preprocesamiento → diversidad **alfa** y **beta** (distancia, PCoA, PERMANOVA) → **abundancia diferencial** — con figuras de revista. Impulsado por scikit-bio; reutiliza `scientific-data-viz` para las figuras. |
-| 📊 **[scientific-data-viz](../skills/scientific-data-viz)** | Figuras de revista con calidad de publicación a partir de datos reales — renderizadas por código, por lo que cada valor es exacto. 20 paletas, leyendas fuera del gráfico, estadísticas opcionales (t / ANOVA / Mann–Whitney / Kruskal / correlación / log-rank / **PERMANOVA**), salida estructurada en `images/` + `script/`. |
-| 🧫 **[scientific-workflow-viz](../skills/scientific-workflow-viz)** | **Prompts de imagen para figuras conceptuales** estilo BioRender (workflow / mecanismo / comparación), con renderizado directo opcional mediante Google **Nano Banana** (API de imágenes de Gemini). |
+| 🧬 **[amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)** | Pipeline de microbioma 16S/ITS — preprocesamiento → diversidad **alfa** y **beta** (distancia, PCoA, PERMANOVA) → **abundancia diferencial** — con figuras de revista. Impulsado por scikit-bio; reutiliza `scientific-data-viz` para las figuras. |
+| 📊 **[scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)** | Figuras de revista con calidad de publicación a partir de datos reales — renderizadas por código, por lo que cada valor es exacto. 20 paletas, leyendas fuera del gráfico, estadísticas opcionales (t / ANOVA / Mann–Whitney / Kruskal / correlación / log-rank / **PERMANOVA**), salida estructurada en `images/` + `script/`. |
+| 🧫 **[scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)** | **Prompts de imagen para figuras conceptuales** estilo BioRender (workflow / mecanismo / comparación), con renderizado directo opcional mediante Google **Nano Banana** (API de imágenes de Gemini). |
 
 ## 🚀 Instalación
 
@@ -59,7 +59,7 @@ La diversidad/PCoA/PERMANOVA usan **scikit-bio**; las figuras y las anotaciones 
 `scientific-data-viz`. Honesto por diseño: los métodos y umbrales se declaran, las pruebas múltiples se
 corrigen, la rarefacción es opcional y se reporta.
 
-→ Guía completa: [`skills/amplicon-analysis`](../skills/amplicon-analysis)
+→ Guía completa: [`amplicon-analysis`](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)
 
 ---
 
@@ -81,7 +81,7 @@ PDF vectorial editable más un script reproducible.
 <img src="../assets/palettes.png" width="66%" alt="Palettes"/>
 </div>
 
-→ Guía completa: [`skills/scientific-data-viz`](../skills/scientific-data-viz)
+→ Guía completa: [`scientific-data-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)
 
 ---
 
@@ -95,7 +95,7 @@ flexible. **Opcionalmente**, renderiza el prompt directamente a una imagen con G
 
 Usa esto para esquemas/diagramas (sin datos detrás); usa `scientific-data-viz` para graficar datos reales.
 
-→ Guía completa: [`skills/scientific-workflow-viz`](../skills/scientific-workflow-viz)
+→ Guía completa: [`scientific-workflow-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)
 
 ---
 

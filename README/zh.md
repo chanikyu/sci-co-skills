@@ -27,9 +27,9 @@
 
 | Skill | 功能说明 |
 |---|---|
-| 🧬 **[amplicon-analysis](../skills/amplicon-analysis)** | 16S/ITS 微生物组流程——预处理 → **alpha** 与 **beta** 多样性（距离、PCoA、PERMANOVA）→ **差异丰度**——并配套期刊级图表。基于 scikit-bio，并复用 `scientific-data-viz` 生成图表。 |
-| 📊 **[scientific-data-viz](../skills/scientific-data-viz)** | 从真实数据生成可发表的期刊级图表——由代码渲染，因此每一个数值都精确无误。20 种配色方案、图例置于图外、可选统计检验（t / ANOVA / Mann–Whitney / Kruskal / 相关性 / log-rank / **PERMANOVA**），并输出结构化的 `images/` 与 `script/`。 |
-| 🧫 **[scientific-workflow-viz](../skills/scientific-workflow-viz)** | BioRender 风格的**概念图图像提示词**（工作流 / 机制 / 对比），并可选通过 Google **Nano Banana**（Gemini image API）直接渲染出图。 |
+| 🧬 **[amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)** | 16S/ITS 微生物组流程——预处理 → **alpha** 与 **beta** 多样性（距离、PCoA、PERMANOVA）→ **差异丰度**——并配套期刊级图表。基于 scikit-bio，并复用 `scientific-data-viz` 生成图表。 |
+| 📊 **[scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)** | 从真实数据生成可发表的期刊级图表——由代码渲染，因此每一个数值都精确无误。20 种配色方案、图例置于图外、可选统计检验（t / ANOVA / Mann–Whitney / Kruskal / 相关性 / log-rank / **PERMANOVA**），并输出结构化的 `images/` 与 `script/`。 |
+| 🧫 **[scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)** | BioRender 风格的**概念图图像提示词**（工作流 / 机制 / 对比），并可选通过 Google **Nano Banana**（Gemini image API）直接渲染出图。 |
 
 ## 🚀 安装
 
@@ -59,7 +59,7 @@
 `scientific-data-viz`。诚实为本的设计：方法与阈值明确说明、进行多重检验校正、
 稀释为可选项并如实报告。
 
-→ 完整指南：[`skills/amplicon-analysis`](../skills/amplicon-analysis)
+→ 完整指南：[`amplicon-analysis`](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)
 
 ---
 
@@ -81,7 +81,7 @@
 <img src="../assets/palettes.png" width="66%" alt="Palettes"/>
 </div>
 
-→ 完整指南：[`skills/scientific-data-viz`](../skills/scientific-data-viz)
+→ 完整指南：[`scientific-data-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)
 
 ---
 
@@ -95,7 +95,7 @@ AI 中使用。采用 5 步方法（分析 → 设计 → 组件 → 插图 → 
 
 用它来绘制示意图 / 图解（背后没有数据）；如需绘制真实数据，请使用 `scientific-data-viz`。
 
-→ 完整指南：[`skills/scientific-workflow-viz`](../skills/scientific-workflow-viz)
+→ 完整指南：[`scientific-workflow-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)
 
 ---
 
