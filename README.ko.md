@@ -143,6 +143,6 @@ python3 -m venv venv
 
 <div align="center">
 
-재현 가능한 과학을 위해 [Claude Code](https://claude.com/claude-code)로 제작 · **Apache-2.0** 라이선스
+재현 가능한 과학을 위해 [Claude Code](https://claude.com/claude-code)로 제작 · [Apache-2.0](LICENSE) 라이선스
 
 </div>

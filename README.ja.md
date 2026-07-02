@@ -144,6 +144,6 @@ python3 -m venv venv
 
 <div align="center">
 
-再現可能な科学のために [Claude Code](https://claude.com/claude-code) で作成 · **Apache-2.0** ライセンス
+再現可能な科学のために [Claude Code](https://claude.com/claude-code) で作成 · [Apache-2.0](LICENSE) ライセンス
 
 </div>

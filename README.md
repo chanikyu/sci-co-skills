@@ -143,6 +143,6 @@ The style module works with **any** matplotlib plot — this is just the curated
 
 <div align="center">
 
-Made for reproducible science with [Claude Code](https://claude.com/claude-code) · **Apache-2.0** licensed
+Made for reproducible science with [Claude Code](https://claude.com/claude-code) · [Apache-2.0](LICENSE) licensed
 
 </div>

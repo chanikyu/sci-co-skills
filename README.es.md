@@ -143,6 +143,6 @@ El módulo de estilo funciona con **cualquier** gráfico de matplotlib — este 
 
 <div align="center">
 
-Hecho para la ciencia reproducible con [Claude Code](https://claude.com/claude-code) · licencia **Apache-2.0**
+Hecho para la ciencia reproducible con [Claude Code](https://claude.com/claude-code) · licencia [Apache-2.0](LICENSE)
 
 </div>

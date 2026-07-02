@@ -143,6 +143,6 @@ python3 -m venv venv
 
 <div align="center">
 
-为可复现的科研而打造，基于 [Claude Code](https://claude.com/claude-code) · 采用 **Apache-2.0** 许可
+为可复现的科研而打造，基于 [Claude Code](https://claude.com/claude-code) · 采用 [Apache-2.0](LICENSE) 许可
 
 </div>
