@@ -1,148 +1,99 @@
 <div align="center">
 
-# 📊 scientific-data-viz
+# 🧪 sci-co-skills
 
-### Real data → publication-ready journal figures. **Exact values, not AI guesses.**
+### A collection of **Claude Code skills** for scientific research & publication.
 
 **English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [中文](README.zh.md) · [Español](README.es.md)
 
 <p>
-  <img src="https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skill">
-  <img src="https://img.shields.io/badge/version-1.0.0-1f77b4?style=for-the-badge" alt="version">
-  <img src="https://img.shields.io/badge/license-Apache%202.0-2ca02c?style=for-the-badge" alt="Apache 2.0">
-  <img src="https://img.shields.io/badge/python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
-  <img src="https://img.shields.io/badge/matplotlib-journal%20style-11557C?style=for-the-badge" alt="matplotlib">
+  <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
+  <img src="https://img.shields.io/badge/version-1.1.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
+  <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
 </p>
 
-A **Claude Code Skill** that turns your data into **Nature / Cell / eLife-style** figures —
-**code-rendered** with `matplotlib` so every bar, point, and error bar matches your numbers.
+Describe your data in natural language and Claude runs the right skill —
+**code-rendered, exact, honest** science outputs (figures, diversity, statistics).
 
-<img src="assets/hero_gallery.png" width="90%" alt="Multi-panel journal figure"/>
+<img src="assets/hero_gallery.png" width="90%" alt="Journal-style figures"/>
 
 </div>
 
 ---
 
-> [!IMPORTANT]
-> **This is not an AI image generator.** Image models fabricate bar heights, axes, and
-> error bars. This skill *writes plotting code* that renders your **exact** values in a
-> clean journal style — and exports an editable vector **PDF** plus a reproducible **script**.
+## 📦 Skills
 
----
-
-## ✨ Features
-
-|  |  |
+| Skill | What it does |
 |---|---|
-| 🎯 **Right plot, automatically** | Intent-based guide maps your data's shape to the clearest chart |
-| 🧑‍🔬 **Journal house style** | White background, no chrome, bold panel letters, filled points, editable PDF |
-| 🔢 **Exact values** | Bars start at zero, error type (SD/SEM/CI) labeled, nothing smoothed or invented |
-| 🎨 **20 color palettes** | Colorblind-safe · journal (NPG/AAAS/NEJM/Lancet/JAMA) · many-category (tab20/igv/kelly) |
-| 📐 **Legends outside** | Never overlap the data |
-| 📈 **Optional statistics** | t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**, full test names |
-| 🔗 **Table + metadata** | Join a feature table and a metadata file on `sample_id` (omics-style) |
-| 📁 **Structured output** | `images/*.png,*.pdf` + `script/*.py` |
-
----
-
-## 🖼️ Examples
-
-<div align="center">
-
-**A page of the built-in plot catalogue** &nbsp;·&nbsp; **the 20-palette swatch**
-
-<img src="assets/plot_catalogue.png" width="88%" alt="Plot catalogue"/>
-<img src="assets/palettes.png" width="70%" alt="Color palettes"/>
-
-</div>
-
----
-
-## 🤖 What is this?
-
-`scientific-data-viz` is a **Skill** for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) —
-you don't run a CLI, you just **describe your data or figure** and Claude loads the skill.
-Prompts that trigger it:
-
-```text
-"make a publication figure from this CSV"
-"draw a journal-style taxonomy bar plot / PCoA"
-"plot a Kaplan–Meier / forest plot / heatmap for my paper"
-```
-
----
+| 📊 **[scientific-data-viz](skills/scientific-data-viz)** | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
+| 🧬 **[amplicon-analysis](skills/amplicon-analysis)** | 16S/ITS microbiome pipeline — preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Powered by scikit-bio; reuses `scientific-data-viz` for the figures. |
 
 ## 🚀 Installation
-
-**1. Add the plugin to Claude Code**
 
 ```bash
 /plugin marketplace add chanikyu/sci-co-skills
 /plugin install sci-co-skills
 ```
 
-**2. Python dependencies** (a venv is created on first use, or set it up manually)
-
-```bash
-python3 -m venv venv
-./venv/bin/pip install -r skills/scientific-data-viz/requirements.txt
-```
-
-Requires `matplotlib`, `numpy`, `scipy`, `pandas`, `squarify`.
+Each skill declares its Python dependencies in `skills/<skill>/requirements.txt`. A virtual
+environment is created on first use. Note: **`amplicon-analysis` needs Python ≤ 3.12** (scikit-bio).
 
 ---
 
-## 🧬 Usage
+## 📊 scientific-data-viz
 
-Describe what you want; the skill runs a fixed workflow:
+Turn real data into **Nature / Cell / eLife-style** figures. Not an AI image generator —
+it writes `matplotlib` code that renders your exact numbers, then exports an editable
+vector PDF plus a reproducible script.
 
-1. **Ingest & inspect** — types, sample size, paired/longitudinal, uncertainty. Accepts a
-   single table **or** a feature table **+ a separate metadata file** joined on `sample_id`.
-2. **Pick the plot** via the selection guide (`plot-selection.md`).
-3. **Ask which palette** (shows the 20-palette swatch; default `tab20`).
-4. **(Optional) statistics** — only when you ask or provide raw replicates.
-5. **Render** in journal style, legends outside.
-6. **Output** `images/<name>.png` (300 dpi) + `images/<name>.pdf` (vector) + `script/<name>.py`.
-7. **Report** which plot, palette, error type, and test were used.
+|  |  |
+|---|---|
+| 🎯 **Right plot, automatically** | Intent-based guide maps data shape → the clearest chart |
+| 🎨 **20 palettes** | Colorblind-safe · journal (NPG/AAAS/NEJM/Lancet/JAMA) · many-category (tab20/igv/kelly) |
+| 📈 **Optional statistics** | Full test names, PERMANOVA, Holm-corrected posthoc |
+| 📁 **Structured output** | `images/*.png,*.pdf` + `script/*.py` |
 
-### 📈 Statistics (opt-in) — annotated with the **full test name**
+<div align="center">
+<img src="assets/plot_catalogue.png" width="80%" alt="Plot catalogue"/>
+<img src="assets/palettes.png" width="66%" alt="Palettes"/>
+</div>
 
-| Situation | Test | Annotation |
-|---|---|---|
-| 2 groups, independent | Welch's t-test / Mann–Whitney U | `Welch's t-test, t = 7.17, P < 0.001` |
-| 2 groups, paired | paired t-test / Wilcoxon signed-rank | `Wilcoxon signed-rank test, W = 3.0, P = 0.002` |
-| 3+ groups | one-way ANOVA / Kruskal–Wallis (+ Holm posthoc) | `one-way ANOVA, F(3, 28) = 12.40, P < 0.001` |
-| correlation | Pearson / Spearman | `Pearson correlation, r = 0.99, P < 0.001` |
-| survival | log-rank | `log-rank test, chi2(1) = 6.1, P = 0.013` |
-| beta diversity | **PERMANOVA** | `PERMANOVA, pseudo-F = 27.10, R² = 0.55, P = 0.001` |
-
-Parametric vs non-parametric is auto-decided by a Shapiro–Wilk normality test and reported.
-The skill never invents a test or fabricates significance.
+→ Full guide: [`skills/scientific-data-viz`](skills/scientific-data-viz)
 
 ---
 
-## 📚 Supported plots
+## 🧬 amplicon-analysis
 
-`Comparison` bar+points · dot · grouped bar &nbsp;|&nbsp;
-`Distribution` box · violin · raincloud · strip/swarm · histogram · KDE · ECDF &nbsp;|&nbsp;
-`Relationship` scatter+fit+CI · bubble · hexbin &nbsp;|&nbsp;
-`Trend` line+band · multi-line · area &nbsp;|&nbsp;
-`Composition` stacked · 100%-stacked · treemap · pie &nbsp;|&nbsp;
-`Ranking` ordered bar · lollipop &nbsp;|&nbsp;
-`Paired` slope · difference &nbsp;|&nbsp;
-`Effect size` forest / coefficient &nbsp;|&nbsp;
-`Matrix` heatmap · clustermap · mosaic &nbsp;|&nbsp;
-`Survival` Kaplan–Meier · cumulative incidence &nbsp;|&nbsp;
-`Agreement` Bland–Altman &nbsp;|&nbsp;
-`Multivariate` PCA · UMAP · PCoA &nbsp;|&nbsp;
-`Flow` Sankey/alluvial · chord
+The standard **16S/ITS microbiome** workflow, end to end, from a feature table
+(counts or relative abundance) + sample metadata:
 
-The style module works with **any** matplotlib plot — this is just the curated, intent-mapped set.
+1. **Preprocess** — auto-detect counts vs relative, join on `sample_id` (report mismatches),
+   filter low-prevalence features, optional seeded rarefaction, CLR.
+2. **Alpha diversity** — observed / Shannon / Simpson / Pielou / Chao1, with a full-name group test.
+3. **Beta diversity** — Bray–Curtis / Jaccard → PCoA (% variance) → **PERMANOVA**.
+4. **Differential abundance** — `clr_test` (default, compositional) · `kruskal_lfc` · `pydeseq2` (optional); BH-FDR.
+5. **Output** — `tables/`, `images/` (journal figures), `script/`, and a plain-language `report.md`.
+
+Diversity/PCoA/PERMANOVA use **scikit-bio**; figures and full-name stat annotations reuse
+`scientific-data-viz`. Honest by design: methods and thresholds stated, multiple testing
+corrected, rarefaction opt-in and reported.
+
+→ Full guide: [`skills/amplicon-analysis`](skills/amplicon-analysis)
+
+---
+
+## 🔬 Design philosophy
+
+- **Exact, not approximate** — data figures are code-rendered; values are never fabricated.
+- **Honest statistics** — the test used is named in full; corrections applied; nothing invented.
+- **Reproducible** — every run emits the script and editable vector outputs.
+- **Composable** — skills reuse each other (amplicon-analysis renders through scientific-data-viz).
 
 ---
 
 <div align="center">
 
-Made for reproducible science with [Claude Code](https://claude.com/claude-code) · [Apache-2.0](LICENSE) licensed
+Made for reproducible science with [Claude Code](https://claude.com/claude-code) · [MIT](LICENSE) licensed
 
 </div>

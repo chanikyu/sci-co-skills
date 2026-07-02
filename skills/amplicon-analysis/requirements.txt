@@ -1,0 +1,10 @@
+# Python deps for amplicon-analysis.
+# IMPORTANT: scikit-bio requires Python <= 3.12. Create the venv with 3.12, e.g.:
+#   uv venv --python 3.12 venv && uv pip install --python venv/bin/python -r requirements.txt
+scikit-bio>=0.6      # alpha/beta diversity, PCoA, PERMANOVA
+matplotlib>=3.8      # figures (via scientific-data-viz journal_style)
+numpy>=1.24
+scipy>=1.10          # differential-abundance tests
+pandas>=2.0          # tables, table+metadata join
+# optional:
+# pydeseq2>=0.4      # DESeq2-style differential abundance (counts only)

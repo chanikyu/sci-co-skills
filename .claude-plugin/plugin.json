@@ -1,12 +1,12 @@
 {
   "name": "sci-co-skills",
-  "version": "1.0.0",
-  "description": "A collection of Claude Code skills for scientific research and publication. Includes scientific-data-viz — publication-quality, code-rendered journal figures from real data (20 palettes, statistics incl. PERMANOVA, structured output). More research skills (e.g. amplicon-analysis) are being added.",
+  "version": "1.1.0",
+  "description": "A collection of Claude Code skills for scientific research and publication. scientific-data-viz — publication-quality, code-rendered journal figures from real data (20 palettes, statistics incl. PERMANOVA). amplicon-analysis — 16S/ITS microbiome pipeline: alpha & beta diversity (PCoA, PERMANOVA) and differential abundance, with journal figures.",
   "author": { "name": "kyukyu", "email": "lkcmsd@gmail.com" },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "keywords": [
-    "figure", "plot", "chart", "matplotlib", "publication", "journal",
-    "visualization", "statistics", "microbiome", "PCoA", "PERMANOVA",
-    "taxonomy-barplot", "alpha-diversity", "beta-diversity"
+    "figure", "plot", "matplotlib", "publication", "journal", "visualization",
+    "statistics", "PERMANOVA", "microbiome", "amplicon", "16S", "scikit-bio",
+    "alpha-diversity", "beta-diversity", "PCoA", "differential-abundance", "bioinformatics"
   ]
 }
