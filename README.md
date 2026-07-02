@@ -17,7 +17,7 @@
 A **Claude Code Skill** that turns your data into **Nature / Cell / eLife-style** figures —
 **code-rendered** with `matplotlib` so every bar, point, and error bar matches your numbers.
 
-<img src="assets/hero_multipanel.png" width="90%" alt="Multi-panel journal figure"/>
+<img src="assets/hero_gallery.png" width="90%" alt="Multi-panel journal figure"/>
 
 </div>
 
@@ -48,23 +48,6 @@ A **Claude Code Skill** that turns your data into **Nature / Cell / eLife-style*
 ## 🖼️ Examples
 
 <div align="center">
-
-**Taxonomy bar plot** — many-category palette, legend outside the plot
-
-<img src="assets/example_taxonomy_barplot.png" width="88%" alt="Taxonomy bar plot"/>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/example_alpha_diversity.png" width="100%" alt="Alpha diversity"/>
-      <br/><sub><b>Alpha diversity</b> — box + points, with the <b>computed</b> test written out in full</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/example_beta_pcoa.png" width="100%" alt="Beta diversity PCoA"/>
-      <br/><sub><b>Beta diversity (PCoA)</b> — % variance axes + <b>PERMANOVA</b></sub>
-    </td>
-  </tr>
-</table>
 
 **A page of the built-in plot catalogue** &nbsp;·&nbsp; **the 20-palette swatch**
 
@@ -155,22 +138,6 @@ The skill never invents a test or fabricates significance.
 `Flow` Sankey/alluvial · chord
 
 The style module works with **any** matplotlib plot — this is just the curated, intent-mapped set.
-
----
-
-## 🗂️ Repository layout
-
-```
-.claude-plugin/plugin.json        plugin manifest
-skills/scientific-data-viz/
-  SKILL.md                        workflow + rules (skill entry point)
-  plot-selection.md               data-nature -> best-plot guide
-  journal_style.py                house-style module (palettes, legends, helpers)
-  stats.py                        optional tests + PCoA / PERMANOVA
-  palette_reference.py / .png     the 20-palette swatch
-  requirements.txt                Python deps
-assets/                           example figures for this README
-```
 
 ---
 

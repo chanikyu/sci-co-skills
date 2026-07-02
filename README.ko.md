@@ -17,7 +17,7 @@
 여러분의 데이터를 **Nature / Cell / eLife 스타일** 그림으로 바꿔 주는 **Claude Code Skill** —
 `matplotlib`으로 **코드 렌더링**하여 모든 막대, 점, 오차 막대가 여러분의 수치와 정확히 일치합니다.
 
-<img src="assets/hero_multipanel.png" width="90%" alt="Multi-panel journal figure"/>
+<img src="assets/hero_gallery.png" width="90%" alt="Multi-panel journal figure"/>
 
 </div>
 
@@ -48,23 +48,6 @@
 ## 🖼️ 예시
 
 <div align="center">
-
-**분류 막대 그림(Taxonomy bar plot)** — 다범주 팔레트, 범례는 플롯 바깥에
-
-<img src="assets/example_taxonomy_barplot.png" width="88%" alt="Taxonomy bar plot"/>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/example_alpha_diversity.png" width="100%" alt="Alpha diversity"/>
-      <br/><sub><b>알파 다양성(Alpha diversity)</b> — 박스 + 점, <b>계산된</b> 검정 결과를 전체 이름으로 표기</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/example_beta_pcoa.png" width="100%" alt="Beta diversity PCoA"/>
-      <br/><sub><b>베타 다양성(PCoA)</b> — % 분산 축 + <b>PERMANOVA</b></sub>
-    </td>
-  </tr>
-</table>
 
 **내장 플롯 카탈로그의 한 페이지** &nbsp;·&nbsp; **20종 팔레트 스와치**
 
@@ -155,22 +138,6 @@ python3 -m venv venv
 `흐름(Flow)` Sankey/alluvial · chord
 
 스타일 모듈은 **모든** matplotlib 플롯과 함께 작동합니다 — 위 목록은 의도별로 매핑해 엄선한 세트일 뿐입니다.
-
----
-
-## 🗂️ 저장소 구조
-
-```
-.claude-plugin/plugin.json        plugin manifest
-skills/scientific-data-viz/
-  SKILL.md                        workflow + rules (skill entry point)
-  plot-selection.md               data-nature -> best-plot guide
-  journal_style.py                house-style module (palettes, legends, helpers)
-  stats.py                        optional tests + PCoA / PERMANOVA
-  palette_reference.py / .png     the 20-palette swatch
-  requirements.txt                Python deps
-assets/                           example figures for this README
-```
 
 ---
 

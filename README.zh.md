@@ -17,7 +17,7 @@
 一个 **Claude Code Skill**，将你的数据转化为 **Nature / Cell / eLife 风格**的图表 ——
 由 `matplotlib` **以代码渲染**，让每一根柱子、每一个数据点、每一条误差线都与你的数值精确对应。
 
-<img src="assets/hero_multipanel.png" width="90%" alt="Multi-panel journal figure"/>
+<img src="assets/hero_gallery.png" width="90%" alt="Multi-panel journal figure"/>
 
 </div>
 
@@ -48,23 +48,6 @@
 ## 🖼️ 示例
 
 <div align="center">
-
-**分类学柱状图** —— 多类别配色，图例置于图外
-
-<img src="assets/example_taxonomy_barplot.png" width="88%" alt="Taxonomy bar plot"/>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/example_alpha_diversity.png" width="100%" alt="Alpha diversity"/>
-      <br/><sub><b>Alpha 多样性</b> —— 箱线图 + 数据点，并将<b>实际计算</b>的检验完整标注</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/example_beta_pcoa.png" width="100%" alt="Beta diversity PCoA"/>
-      <br/><sub><b>Beta 多样性（PCoA）</b> —— 百分比方差坐标轴 + <b>PERMANOVA</b></sub>
-    </td>
-  </tr>
-</table>
 
 **内置图表目录的一页** &nbsp;·&nbsp; **20 种配色色板**
 
@@ -155,22 +138,6 @@ python3 -m venv venv
 `流向类` Sankey/alluvial · chord
 
 样式模块适用于**任何** matplotlib 图表 —— 上述只是经过精选、按意图映射的图表集合。
-
----
-
-## 🗂️ 仓库结构
-
-```
-.claude-plugin/plugin.json        plugin manifest
-skills/scientific-data-viz/
-  SKILL.md                        workflow + rules (skill entry point)
-  plot-selection.md               data-nature -> best-plot guide
-  journal_style.py                house-style module (palettes, legends, helpers)
-  stats.py                        optional tests + PCoA / PERMANOVA
-  palette_reference.py / .png     the 20-palette swatch
-  requirements.txt                Python deps
-assets/                           example figures for this README
-```
 
 ---
 

@@ -17,7 +17,7 @@
 データを **Nature / Cell / eLife スタイル** の図に変換する **Claude Code スキル** —
 `matplotlib` による **コード描画** なので、すべての棒・点・誤差棒があなたの数値と一致します。
 
-<img src="assets/hero_multipanel.png" width="90%" alt="Multi-panel journal figure"/>
+<img src="assets/hero_gallery.png" width="90%" alt="Multi-panel journal figure"/>
 
 </div>
 
@@ -49,23 +49,6 @@
 ## 🖼️ 例
 
 <div align="center">
-
-**分類群の棒グラフ** — 多カテゴリパレット、凡例はプロットの外側
-
-<img src="assets/example_taxonomy_barplot.png" width="88%" alt="Taxonomy bar plot"/>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/example_alpha_diversity.png" width="100%" alt="Alpha diversity"/>
-      <br/><sub><b>アルファ多様性</b> — ボックス + 点、<b>計算された</b>検定を省略せず記載</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/example_beta_pcoa.png" width="100%" alt="Beta diversity PCoA"/>
-      <br/><sub><b>ベータ多様性（PCoA）</b> — % 分散軸 + <b>PERMANOVA</b></sub>
-    </td>
-  </tr>
-</table>
 
 **組み込みプロットカタログの1ページ** &nbsp;·&nbsp; **20パレットのスウォッチ**
 
@@ -156,22 +139,6 @@ python3 -m venv venv
 `フロー` Sankey/alluvial · chord
 
 スタイルモジュールは **あらゆる** matplotlib プロットで機能します — これは厳選され、意図に対応づけられたセットにすぎません。
-
----
-
-## 🗂️ リポジトリ構成
-
-```
-.claude-plugin/plugin.json        plugin manifest
-skills/scientific-data-viz/
-  SKILL.md                        workflow + rules (skill entry point)
-  plot-selection.md               data-nature -> best-plot guide
-  journal_style.py                house-style module (palettes, legends, helpers)
-  stats.py                        optional tests + PCoA / PERMANOVA
-  palette_reference.py / .png     the 20-palette swatch
-  requirements.txt                Python deps
-assets/                           example figures for this README
-```
 
 ---
 

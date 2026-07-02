@@ -17,7 +17,7 @@
 Un **Skill de Claude Code** que convierte tus datos en figuras al **estilo de Nature / Cell / eLife** —
 **renderizadas por código** con `matplotlib` para que cada barra, punto y barra de error coincida con tus números.
 
-<img src="assets/hero_multipanel.png" width="90%" alt="Multi-panel journal figure"/>
+<img src="assets/hero_gallery.png" width="90%" alt="Multi-panel journal figure"/>
 
 </div>
 
@@ -48,23 +48,6 @@ Un **Skill de Claude Code** que convierte tus datos en figuras al **estilo de Na
 ## 🖼️ Ejemplos
 
 <div align="center">
-
-**Gráfico de barras de taxonomía** — paleta de muchas categorías, leyenda fuera del gráfico
-
-<img src="assets/example_taxonomy_barplot.png" width="88%" alt="Taxonomy bar plot"/>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/example_alpha_diversity.png" width="100%" alt="Alpha diversity"/>
-      <br/><sub><b>Diversidad alfa</b> — caja + puntos, con la prueba <b>calculada</b> escrita por completo</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/example_beta_pcoa.png" width="100%" alt="Beta diversity PCoA"/>
-      <br/><sub><b>Diversidad beta (PCoA)</b> — ejes con % de varianza + <b>PERMANOVA</b></sub>
-    </td>
-  </tr>
-</table>
 
 **Una página del catálogo de gráficos integrado** &nbsp;·&nbsp; **el muestrario de 20 paletas**
 
@@ -155,22 +138,6 @@ El skill nunca inventa una prueba ni fabrica significancia.
 `Flujo` Sankey/aluvial · cuerda
 
 El módulo de estilo funciona con **cualquier** gráfico de matplotlib — este es solo el conjunto curado y asignado por intención.
-
----
-
-## 🗂️ Estructura del repositorio
-
-```
-.claude-plugin/plugin.json        plugin manifest
-skills/scientific-data-viz/
-  SKILL.md                        workflow + rules (skill entry point)
-  plot-selection.md               data-nature -> best-plot guide
-  journal_style.py                house-style module (palettes, legends, helpers)
-  stats.py                        optional tests + PCoA / PERMANOVA
-  palette_reference.py / .png     the 20-palette swatch
-  requirements.txt                Python deps
-assets/                           example figures for this README
-```
 
 ---
 
