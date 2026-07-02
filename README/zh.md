@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🧪 SciCo-Skills
+<img src="../assets/logo.png" width="150" alt="SciCo-Skills logo"/>
+
+# SciCo-Skills
 
 ### 一套面向科学研究与论文发表的 **Claude Code skills** 集合。
 
@@ -15,8 +17,6 @@
 
 用自然语言描述你的数据，Claude 就会运行合适的 skill——生成
 **由代码渲染、精确、诚实**的科学成果（多样性、统计、图表）。
-
-<img src="../assets/hero_gallery.png" width="90%" alt="Journal-style figures"/>
 
 </div>
 

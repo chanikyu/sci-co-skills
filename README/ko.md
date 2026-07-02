@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🧪 SciCo-Skills
+<img src="../assets/logo.png" width="150" alt="SciCo-Skills logo"/>
+
+# SciCo-Skills
 
 ### 과학 연구와 논문 출판을 위한 **Claude Code 스킬** 모음.
 
@@ -15,8 +17,6 @@
 
 데이터를 자연어로 설명하면 Claude가 알맞은 스킬을 실행합니다 —
 **코드로 렌더링되고, 정확하며, 정직한** 과학 결과물(다양성, 통계, 그림)을 만듭니다.
-
-<img src="../assets/hero_gallery.png" width="90%" alt="Journal-style figures"/>
 
 </div>
 
