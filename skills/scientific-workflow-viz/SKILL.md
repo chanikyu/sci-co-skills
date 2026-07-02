@@ -1,6 +1,6 @@
 ---
 name: scientific-workflow-viz
-description: Use when the user wants an IMAGE PROMPT for a high-quality BioRender-style scientific figure — workflow, pipeline, mechanism, comparison, timeline, or multi-panel infographic — to paste into FigureLabs, BioRender AI, or any AI image tool. Follows a 5-step process (analyze the content → choose the design → set the components → choose the illustrations → write the prompt) with a FLEXIBLE layout (any number of panels/steps/stages; default 16:9). Triggers — "워크플로우 그림", "scheme/pipeline/mechanism figure", "BioRender 스타일", "scientific workflow infographic", or "이미지 프롬프트" for a figure/diagram. Invoke when the user asks to visualize a method/process/comparison as a figure.
+description: 'Use when the user wants an IMAGE PROMPT for a high-quality BioRender-style scientific figure — workflow, pipeline, mechanism, comparison, timeline, or multi-panel infographic — to paste into FigureLabs, BioRender AI, or any AI image tool. Follows a 5-step process (analyze the content → choose the design → set the components → choose the illustrations → write the prompt) with a FLEXIBLE layout (any number of panels/steps/stages; default 16:9). Triggers — "워크플로우 그림", "scheme/pipeline/mechanism figure", "BioRender 스타일", "scientific workflow infographic", or "이미지 프롬프트" for a figure/diagram. Invoke when the user asks to visualize a method/process/comparison as a figure.'
 ---
 
 # Scientific Workflow Viz

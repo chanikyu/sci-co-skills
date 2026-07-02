@@ -1,6 +1,6 @@
 ---
 name: scientific-data-viz
-description: Use when the user has REAL data (numbers, a table, CSV, experiment results, stats) and wants a publication-quality journal figure (Nature/Cell/eLife style) plotted from it — a bar/line/box/scatter/heatmap/forest/survival/etc. chart where the exact data values must be rendered faithfully. Triggers — "논문 그림/figure 그려줘", "이 데이터로 그래프", "publication figure", "저널 스타일 plot", "막대/박스/산점도/히트맵 그려줘", "figure for my paper". NOT for conceptual diagrams/workflows/mechanisms (use scientific-workflow-viz instead).
+description: 'Use when the user has REAL data (numbers, a table, CSV, experiment results, stats) and wants a publication-quality journal figure (Nature/Cell/eLife style) plotted from it — a bar/line/box/scatter/heatmap/forest/survival/etc. chart where the exact data values must be rendered faithfully. Triggers — "논문 그림/figure 그려줘", "이 데이터로 그래프", "publication figure", "저널 스타일 plot", "막대/박스/산점도/히트맵 그려줘", "figure for my paper". NOT for conceptual diagrams/workflows/mechanisms (use scientific-workflow-viz instead).'
 ---
 
 # Scientific Data Viz

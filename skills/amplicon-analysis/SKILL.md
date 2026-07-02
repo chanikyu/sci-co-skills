@@ -1,6 +1,6 @@
 ---
 name: amplicon-analysis
-description: Use when the user has amplicon (16S/ITS) microbiome data — a feature/ASV/OTU table (counts or relative abundance) plus sample metadata — and wants standard community analysis: alpha diversity, beta diversity (distance + PCoA + PERMANOVA), and/or differential abundance between groups, with journal-quality figures. Triggers — "microbiome/amplicon 분석", "alpha/beta diversity 분석", "16S 분석", "차등존재비/differential abundance", "PCoA/PERMANOVA", "이 feature table 분석해줘". NOT for making a figure from already-computed numbers (use scientific-data-viz) or for metabolic modeling.
+description: 'Use when the user has amplicon (16S/ITS) microbiome data — a feature/ASV/OTU table (counts or relative abundance) plus sample metadata — and wants standard community analysis: alpha diversity, beta diversity (distance + PCoA + PERMANOVA), and/or differential abundance between groups, with journal-quality figures. Triggers — "microbiome/amplicon 분석", "alpha/beta diversity 분석", "16S 분석", "차등존재비/differential abundance", "PCoA/PERMANOVA", "이 feature table 분석해줘". NOT for making a figure from already-computed numbers (use scientific-data-viz) or for metabolic modeling.'
 ---
 
 # Amplicon Analysis
