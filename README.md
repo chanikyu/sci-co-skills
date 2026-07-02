@@ -4,17 +4,17 @@
 
 ### A collection of **Claude Code skills** for scientific research & publication.
 
-**English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [中文](README.zh.md) · [Español](README.es.md)
+**English** · [한국어](README/ko.md) · [日本語](README/ja.md) · [中文](README/zh.md) · [Español](README/es.md)
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.1.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.2.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
 </p>
 
 Describe your data in natural language and Claude runs the right skill —
-**code-rendered, exact, honest** science outputs (figures, diversity, statistics).
+**code-rendered, exact, honest** science outputs (diversity, statistics, figures).
 
 <img src="assets/hero_gallery.png" width="90%" alt="Journal-style figures"/>
 
@@ -26,8 +26,9 @@ Describe your data in natural language and Claude runs the right skill —
 
 | Skill | What it does |
 |---|---|
-| 📊 **[scientific-data-viz](skills/scientific-data-viz)** | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
 | 🧬 **[amplicon-analysis](skills/amplicon-analysis)** | 16S/ITS microbiome pipeline — preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Powered by scikit-bio; reuses `scientific-data-viz` for the figures. |
+| 📊 **[scientific-data-viz](skills/scientific-data-viz)** | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
+| 🧫 **[scientific-workflow-viz](skills/scientific-workflow-viz)** | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
 
 ## 🚀 Installation
 
@@ -38,6 +39,26 @@ Describe your data in natural language and Claude runs the right skill —
 
 Each skill declares its Python dependencies in `skills/<skill>/requirements.txt`. A virtual
 environment is created on first use. Note: **`amplicon-analysis` needs Python ≤ 3.12** (scikit-bio).
+
+---
+
+## 🧬 amplicon-analysis
+
+The standard **16S/ITS microbiome** workflow, end to end, from a feature table
+(counts or relative abundance) + sample metadata:
+
+1. **Preprocess** — auto-detect counts vs relative, join on `sample_id` (report mismatches),
+   filter low-prevalence features, optional seeded rarefaction, CLR.
+2. **Alpha diversity** — observed / Shannon / Simpson / Pielou / Chao1, with a full-name group test.
+3. **Beta diversity** — Bray–Curtis / Jaccard → PCoA (% variance) → **PERMANOVA**.
+4. **Differential abundance** — `clr_test` (default, compositional) · `kruskal_lfc` · `pydeseq2` (optional); BH-FDR.
+5. **Output** — `tables/`, `images/` (journal figures), `script/`, and a plain-language `report.md`.
+
+Diversity/PCoA/PERMANOVA use **scikit-bio**; figures and full-name stat annotations reuse
+`scientific-data-viz`. Honest by design: methods and thresholds stated, multiple testing
+corrected, rarefaction opt-in and reported.
+
+→ Full guide: [`skills/amplicon-analysis`](skills/amplicon-analysis)
 
 ---
 
@@ -63,23 +84,17 @@ vector PDF plus a reproducible script.
 
 ---
 
-## 🧬 amplicon-analysis
+## 🧫 scientific-workflow-viz
 
-The standard **16S/ITS microbiome** workflow, end to end, from a feature table
-(counts or relative abundance) + sample metadata:
+BioRender-style **concept-figure image prompts** — workflow, pipeline, mechanism,
+comparison, timeline, or multi-panel infographic — ready to paste into FigureLabs / BioRender
+AI. A 5-step method (analyze → design → components → illustrations → prompt) with a flexible
+layout. **Optionally** render the prompt straight to an image with Google **Nano Banana**
+(Gemini image API) — just provide a key.
 
-1. **Preprocess** — auto-detect counts vs relative, join on `sample_id` (report mismatches),
-   filter low-prevalence features, optional seeded rarefaction, CLR.
-2. **Alpha diversity** — observed / Shannon / Simpson / Pielou / Chao1, with a full-name group test.
-3. **Beta diversity** — Bray–Curtis / Jaccard → PCoA (% variance) → **PERMANOVA**.
-4. **Differential abundance** — `clr_test` (default, compositional) · `kruskal_lfc` · `pydeseq2` (optional); BH-FDR.
-5. **Output** — `tables/`, `images/` (journal figures), `script/`, and a plain-language `report.md`.
+Use this for schematics/diagrams (no data behind them); use `scientific-data-viz` to plot real data.
 
-Diversity/PCoA/PERMANOVA use **scikit-bio**; figures and full-name stat annotations reuse
-`scientific-data-viz`. Honest by design: methods and thresholds stated, multiple testing
-corrected, rarefaction opt-in and reported.
-
-→ Full guide: [`skills/amplicon-analysis`](skills/amplicon-analysis)
+→ Full guide: [`skills/scientific-workflow-viz`](skills/scientific-workflow-viz)
 
 ---
 
