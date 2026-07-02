@@ -4,10 +4,12 @@
 
 ### Real data → publication-ready journal figures. **Exact values, not AI guesses.**
 
+**English** · [한국어](README.ko.md) · [日本語](README.ja.md) · [中文](README.zh.md) · [Español](README.es.md)
+
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skill-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skill">
   <img src="https://img.shields.io/badge/version-1.0.0-1f77b4?style=for-the-badge" alt="version">
-  <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
+  <img src="https://img.shields.io/badge/license-Apache%202.0-2ca02c?style=for-the-badge" alt="Apache 2.0">
   <img src="https://img.shields.io/badge/python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <img src="https://img.shields.io/badge/matplotlib-journal%20style-11557C?style=for-the-badge" alt="matplotlib">
 </p>
@@ -80,8 +82,9 @@ you don't run a CLI, you just **describe your data or figure** and Claude loads 
 Prompts that trigger it:
 
 ```text
-"이 CSV로 논문 figure 그려줘"          "make a publication figure from this data"
-"저널 스타일 taxonomy barplot / PCoA"   "draw a Kaplan–Meier / forest plot / heatmap for my paper"
+"make a publication figure from this CSV"
+"draw a journal-style taxonomy bar plot / PCoA"
+"plot a Kaplan–Meier / forest plot / heatmap for my paper"
 ```
 
 ---
@@ -173,6 +176,6 @@ assets/                           example figures for this README
 
 <div align="center">
 
-Made for reproducible science with [Claude Code](https://claude.com/claude-code) · **MIT** licensed
+Made for reproducible science with [Claude Code](https://claude.com/claude-code) · **Apache-2.0** licensed
 
 </div>

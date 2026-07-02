@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Turn real data into publication-quality journal figures (Nature/Cell/eLife style). Code-rendered exact-value plots with palette selection (20 sets), optional statistics (t/ANOVA/Mann-Whitney/Kruskal/PERMANOVA/log-rank), legends outside the plot, and structured images/script output.",
   "author": { "name": "kyukyu", "email": "lkcmsd@gmail.com" },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "figure", "plot", "chart", "matplotlib", "publication", "journal",
     "visualization", "statistics", "microbiome", "PCoA", "PERMANOVA",
