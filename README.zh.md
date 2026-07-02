@@ -77,8 +77,8 @@
 **1. 将插件添加到 Claude Code**
 
 ```bash
-/plugin marketplace add chanikyu/scientific-data-viz
-/plugin install scientific-data-viz
+/plugin marketplace add chanikyu/sci-co-skills
+/plugin install sci-co-skills
 ```
 
 **2. Python 依赖**（首次使用时会自动创建 venv，也可手动配置）

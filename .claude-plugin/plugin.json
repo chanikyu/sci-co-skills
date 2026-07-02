@@ -1,7 +1,7 @@
 {
-  "name": "scientific-data-viz",
+  "name": "sci-co-skills",
   "version": "1.0.0",
-  "description": "Turn real data into publication-quality journal figures (Nature/Cell/eLife style). Code-rendered exact-value plots with palette selection (20 sets), optional statistics (t/ANOVA/Mann-Whitney/Kruskal/PERMANOVA/log-rank), legends outside the plot, and structured images/script output.",
+  "description": "A collection of Claude Code skills for scientific research and publication. Includes scientific-data-viz — publication-quality, code-rendered journal figures from real data (20 palettes, statistics incl. PERMANOVA, structured output). More research skills (e.g. amplicon-analysis) are being added.",
   "author": { "name": "kyukyu", "email": "lkcmsd@gmail.com" },
   "license": "Apache-2.0",
   "keywords": [

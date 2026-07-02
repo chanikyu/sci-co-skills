@@ -77,8 +77,8 @@ Instrucciones que lo activan:
 **1. Añade el plugin a Claude Code**
 
 ```bash
-/plugin marketplace add chanikyu/scientific-data-viz
-/plugin install scientific-data-viz
+/plugin marketplace add chanikyu/sci-co-skills
+/plugin install sci-co-skills
 ```
 
 **2. Dependencias de Python** (se crea un venv en el primer uso, o configúralo manualmente)
