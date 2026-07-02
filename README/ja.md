@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="../assets/logo.png" width="150" alt="SciCo-Skills logo"/>
+
 # SciCo-Skills
 
 ### 科学研究・論文発表のための **Claude Code スキル** 集。
@@ -14,8 +16,8 @@
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
 </p>
 
-あなたのデータを **コードで描画され、正確で、誠実な** 科学的アウトプットへ —
-多様性、統計、そして論文用の図に。
+データを自然言語で説明すれば、Claude が適切なスキルを実行し —
+**コードで描画され、正確で、誠実な** 科学的アウトプット（多様性、統計、図）を生成します。
 
 📖 **[Wiki でドキュメントを読む »](https://github.com/chanikyu/SciCo-Skills/wiki)**
 
@@ -27,19 +29,25 @@
 
 | Skill | 機能 |
 |---|---|
-| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS マイクロバイオームパイプライン — アルファ・ベータ多様性（PCoA、PERMANOVA）と示差存在量解析を、ジャーナル品質の図とともに提供。 |
-| 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 実データから作る論文品質のジャーナル図 — 正確な値、20 のパレット、PERMANOVA を含む統計。 |
-| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルのコンセプト図イメージプロンプト。任意で Google の Nano Banana（Gemini）による描画にも対応。 |
+| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS マイクロバイオームパイプライン — 前処理 → **アルファ**・**ベータ**多様性（距離、PCoA、PERMANOVA）→ **示差存在量解析** — ジャーナル品質の図とともに提供。scikit-bio を利用し、図の描画には `scientific-data-viz` を再利用します。 |
+| 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 種類のパレット、凡例を図の外側に配置、任意の統計処理（t 検定 / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
+| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルの **コンセプト図イメージプロンプト**（ワークフロー / メカニズム / 比較）。任意で Google の **Nano Banana**（Gemini 画像 API）による直接描画にも対応。 |
 
-## 🚀 Installation
+## 🚀 Quick start
 
-```bash
+```
 /plugin marketplace add chanikyu/SciCo-Skills
 /plugin install SciCo-Skills
 ```
 
-セットアップの全手順とスキルごとのガイドは **[Wiki](https://github.com/chanikyu/SciCo-Skills/wiki)** にあります
-（`amplicon-analysis` には Python ≤ 3.12 が必要です）。
+詳しいセットアップは [Installation](https://github.com/chanikyu/SciCo-Skills/wiki/Installation) ページをご覧ください。
+
+## 🔬 Design philosophy
+
+- **近似ではなく正確に** — データ図はコードで描画され、値が捏造されることはありません。
+- **誠実な統計** — 使用した検定を正式名称で明記し、補正を適用し、何も創作しません。
+- **再現可能** — 実行するたびにスクリプトと編集可能なベクター出力を生成します。
+- **組み合わせ可能** — スキルは互いを再利用します（amplicon-analysis は scientific-data-viz を通じて描画します）。
 
 ---
 

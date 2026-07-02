@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/logo.png" width="150" alt="SciCo-Skills logo"/>
+
 # SciCo-Skills
 
 ### A collection of **Claude Code skills** for scientific research & publication.
@@ -14,8 +16,8 @@
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
 </p>
 
-Turn your data into **code-rendered, exact, honest** science outputs —
-diversity, statistics, and publication figures.
+Describe your data in natural language and Claude runs the right skill —
+**code-rendered, exact, honest** science outputs (diversity, statistics, figures).
 
 📖 **[Read the docs on the Wiki »](https://github.com/chanikyu/SciCo-Skills/wiki)**
 
@@ -27,19 +29,25 @@ diversity, statistics, and publication figures.
 
 | Skill | What it does |
 |---|---|
-| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS microbiome pipeline — alpha & beta diversity (PCoA, PERMANOVA) and differential abundance, with journal figures. |
-| 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | Publication-quality journal figures from real data — exact values, 20 palettes, statistics incl. PERMANOVA. |
-| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender-style concept-figure image prompts, with optional Google Nano Banana (Gemini) rendering. |
+| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS microbiome pipeline — preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Powered by scikit-bio; reuses `scientific-data-viz` for the figures. |
+| 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
+| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
 
-## 🚀 Installation
+## 🚀 Quick start
 
-```bash
+```
 /plugin marketplace add chanikyu/SciCo-Skills
 /plugin install SciCo-Skills
 ```
 
-Full setup and per-skill guides are on the **[Wiki](https://github.com/chanikyu/SciCo-Skills/wiki)**
-(`amplicon-analysis` needs Python ≤ 3.12).
+Full setup on the [Installation](https://github.com/chanikyu/SciCo-Skills/wiki/Installation) page.
+
+## 🔬 Design philosophy
+
+- **Exact, not approximate** — data figures are code-rendered; values are never fabricated.
+- **Honest statistics** — the test used is named in full; corrections applied; nothing invented.
+- **Reproducible** — every run emits the script and editable vector outputs.
+- **Composable** — skills reuse each other (amplicon-analysis renders through scientific-data-viz).
 
 ---
 
