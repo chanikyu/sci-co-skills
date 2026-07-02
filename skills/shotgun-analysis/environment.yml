@@ -1,0 +1,40 @@
+# One conda environment for the whole shotgun pipeline (front stages + core).
+# Create once, then the skill runs tools via `conda run -n scico-shotgun <cmd>`:
+#   conda env create -f environment.yml      # or: mamba env create -f ...
+#
+name: scico-shotgun
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12          # scikit-bio requires Python <= 3.12
+  # --- Stage 0: QC + host removal ---
+  - fastp                # adapter + quality trimming
+  - bowtie2              # host-read removal (map vs host genome)
+  - samtools             # BAM/read handling
+  # --- Stage 1: taxonomic profiling (both supported) ---
+  - metaphlan            # marker-gene profiler (DB ~ few GB)
+  - kraken2              # k-mer classifier (DB 50-100 GB+)
+  - bracken              # abundance re-estimation for kraken2
+  # --- Stage 2: functional profiling (optional) ---
+  - humann               # pathway / gene-family abundance (large DBs)
+  # --- assembly-based track: assembly -> binning (MAGs) -> QC -> taxonomy ---
+  - megahit              # assembler (fast, low RAM)
+  - spades               # metaSPAdes (higher quality, more RAM)
+  - metabat2             # binner
+  - concoct              # binner
+  - semibin              # SemiBin2 binner
+  - das_tool             # consensus bin refinement (MetaBAT2 + CONCOCT + SemiBin2)
+  - checkm2              # MAG completeness / contamination QC
+  - gtdbtk               # MAG taxonomy (GTDB; DB ~100 GB, user-provided)
+  - coverm               # MAG relative abundance from BAMs
+  - prodigal             # gene prediction
+  # --- core: diversity + differential abundance + figures (reused) ---
+  - scikit-bio
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  - squarify
+  # optional:
+  # - pydeseq2

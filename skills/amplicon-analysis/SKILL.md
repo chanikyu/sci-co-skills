@@ -39,10 +39,43 @@ UniFrac only when a phylogenetic tree is provided. Never invent significance.
 6. **Output** — `<base>/tables/*.csv`, `<base>/images/*.png,*.pdf`, `<base>/script/*.py`,
    `<base>/report.md`. Tell the user the layout and the key results.
 
+## Operating procedure — enter at ANY stage
+
+`pipeline.run(input_path, metadata, group_col, out_dir, from_stage=None)` detects what the
+input is and runs everything downstream. Follow this every run:
+
+0. **Environment** — ensure the `scico-amplicon` conda env (below); create if missing (ask first).
+1. **Input** — take the data path from the request.
+2. **Detect the stage** — `stages.detect_stage(path)` → `fastq` | `feature_table` |
+   `distance_matrix` | `alpha_table`, plus the downstream steps.
+3. **Confirm downstream + check DB** — a taxonomy DB is needed ONLY for FASTQ → taxonomy;
+   everything else runs without it.
+4. **Ask for the DB path** — if taxonomy is wanted, use `AskUserQuestion` for the
+   user-downloaded reference DB (16S → SILVA, ITS → UNITE). No path → skip taxonomy (run on ASVs).
+5–6. **Pick each tool's options from the data** — e.g. DADA2 `truncLen`/`maxEE` from the
+   read-quality profile, filter thresholds from the prevalence distribution — don't hardcode.
+7. **Run + log** — run each stage via `conda run`, teeing stdout/stderr to `logs/<stage>.log`.
+8. **Validate** — outputs exist and are sane (files non-empty, p ∈ [0,1], no crash); stop &
+   report on failure.
+9. **Next stage** — repeat for each downstream step.
+
+Entry points (tested): feature table → full pipeline; distance matrix → PCoA + PERMANOVA;
+alpha table → group test + figure. FASTQ (Stage 0, DADA2) is the pluggable front stage.
+
 ## Usage
 
 ```python
 import sys; sys.path.insert(0, "/Users/kyukyu/.claude/skills/amplicon-analysis")
+import pipeline
+pipeline.run(                            # enters at whatever stage the input is
+    input_path="feature_table.csv",      # FASTQ dir / feature table / distance matrix / alpha table
+    metadata="metadata.csv",             # sample_id + group column
+    group_col="group",
+    out_dir="/path/to/results",          # -> tables/ images/ script/ logs/ report.md
+    from_stage=None,                      # or force e.g. "feature_table"
+)
+
+# or the core directly (feature table onward):
 import analyze
 analyze.run(
     feature_table="feature_table.csv",   # samples × taxa (counts or relative); index=sample_id
@@ -69,17 +102,22 @@ PCoA + PERMANOVA via scikit-bio), `differential` (clr_test / kruskal_lfc / pydes
 - **`pydeseq2`** (optional) — DESeq2-style negative-binomial; **counts only**; used only if
   the `pydeseq2` package is installed. Refuses on relative-abundance input.
 
-## Environment
+## Environment (conda — auto-created if missing)
 
-**scikit-bio requires Python ≤ 3.12.** Create the venv accordingly:
+All tools live in ONE conda env, **`scico-amplicon`** (`environment.yml`: Python 3.12 +
+scikit-bio, and for FASTQ Stage 0, R + `bioconductor-dada2` + `cutadapt`).
+
+**Step 0 of every run — ensure the env, create it if it's missing** (ask the user first: it's
+a large ~1–2 GB, ~10–15 min install), then run every tool through it:
 
 ```bash
-uv venv --python 3.12 venv
-uv pip install --python venv/bin/python -r skills/amplicon-analysis/requirements.txt
+conda env list | grep -q scico-amplicon \
+  || conda env create -f skills/amplicon-analysis/environment.yml   # one-time; mamba/libmamba is faster
+conda run -n scico-amplicon python -m amplicon ...                  # all tools via `conda run -n scico-amplicon`
 ```
 
-Depends on the sibling `scientific-data-viz` skill (imported by path) for `journal_style`
-and `stats` — keep the two skills as siblings.
+Created once, reused after. Depends on the sibling `scientific-data-viz` skill (imported by
+path) for `journal_style` and `stats` — keep the two as siblings.
 
 ## Common mistakes
 

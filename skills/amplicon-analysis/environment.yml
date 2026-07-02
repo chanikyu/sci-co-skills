@@ -1,0 +1,28 @@
+# One conda environment for the whole amplicon pipeline (core + Stage 0).
+# Create once (slow: pulls R + DADA2), then the skill runs tools via
+#   conda run -n scico-amplicon <cmd>
+#
+#   conda env create -f environment.yml      # or: mamba env create -f ...
+#
+name: scico-amplicon
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12          # scikit-bio requires Python <= 3.12
+  # --- Stage 0: FASTQ -> ASV feature table ---
+  - bioconductor-dada2   # denoise (R)
+  - r-base
+  - r-optparse           # CLI for the R runner
+  - cutadapt             # primer removal (required for ITS; common for 16S)
+  - tbb=2020.2           # pin classic TBB — oneTBB (>=2021) breaks dada2.so on macOS
+                         #   (Symbol not found: tbb::task::note_affinity). Verified with dada2 1.34.0.
+  # --- core: diversity + differential abundance + figures ---
+  - scikit-bio           # alpha/beta diversity, PCoA, PERMANOVA
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  - squarify
+  # optional:
+  # - pydeseq2           # DESeq2-style differential abundance (counts only)

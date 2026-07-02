@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.2.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.3.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -29,7 +29,8 @@
 
 | Skill | 功能说明 |
 |---|---|
-| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS 微生物组流程——预处理 → **alpha** 与 **beta** 多样性（距离、PCoA、PERMANOVA）→ **差异丰度** ——并配套期刊级图表。基于 scikit-bio；图表部分复用 `scientific-data-viz`。 |
+| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS 微生物组流程 — FASTQ(DADA2)或 feature table → 预处理 → α 与 β 多样性(距离, PCoA, PERMANOVA) → 差异丰度 — 生成期刊图。可从任意阶段进入; 基于 scikit-bio; 复用 scientific-data-viz。 |
+| 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | 鸟枪法宏基因组 — QC + 宿主去除 → 基于读长的分析(MetaPhlAn / Kraken2+Bracken, HUMAnN)或基于组装的 MAG(MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → 多样性 & 差异丰度。复用 amplicon-analysis 核心。 |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 从真实数据生成可发表的期刊级图表——由代码渲染，因此每个数值都精确无误。20 种配色方案、图例置于图外、可选统计检验（t / ANOVA / Mann–Whitney / Kruskal / 相关性 / log-rank / **PERMANOVA**），并输出结构化的 `images/` + `script/`。 |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender 风格的**概念图图像提示词**（工作流 / 机制 / 对比），可选通过 Google **Nano Banana**（Gemini 图像 API）直接渲染成图。 |
 

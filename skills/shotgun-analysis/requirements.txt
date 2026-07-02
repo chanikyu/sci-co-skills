@@ -1,0 +1,10 @@
+# shotgun-analysis uses conda (see environment.yml) — the front-stage tools (fastp, bowtie2,
+# metaphlan, kraken2, bracken, humann) are not on PyPI. These are the Python-only deps for the
+# reused downstream core, if you run it outside conda:
+scikit-bio>=0.6
+matplotlib>=3.8
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+squarify>=0.4
+# Reuses sibling skills amplicon-analysis (analysis core) and scientific-data-viz (figures).
