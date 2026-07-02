@@ -11,6 +11,17 @@ The primary output is a TEXT PROMPT (paste into FigureLabs / BioRender AI / any 
 > use this for schematics/diagrams (no data behind them); use `scientific-data-viz` to plot
 > real data.
 
+## 🤖 Use it in Claude
+
+**Describe the method or process** you want to visualize — Claude writes the ready-to-paste
+image prompt (and can render it if you provide a Nano Banana key). For example, just say:
+
+> *"Make a BioRender-style workflow figure for this pipeline."*
+>
+> *"...and render it with Nano Banana"* (after you set `GEMINI_API_KEY`)
+
+The steps below are the method Claude follows to write that prompt.
+
 ## The 5-step process
 
 1. **Analyze the content** — key entities, steps/relationships, single main message.

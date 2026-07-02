@@ -10,6 +10,19 @@ and full-name statistics reuse **[scientific-data-viz](../scientific-data-viz)**
 <img src="../../assets/amplicon_workflow.png" width="92%" alt="amplicon-analysis pipeline: input → preprocess → alpha / beta / differential abundance → output"/>
 </div>
 
+## 🤖 Use it in Claude
+
+You don't run any Python yourself — **describe your data to Claude** and it runs the whole
+pipeline (loads the tables, computes diversity + differential abundance, saves the figures
+and `report.md`). For example, just say:
+
+> *"Analyze this feature table + metadata for alpha & beta diversity and differential abundance, grouping by `group`."*
+>
+> *"run amplicon-analysis on counts.csv + metadata.csv — rarefy to even depth, Bray-Curtis PCoA + PERMANOVA, clr_test"*
+
+Claude confirms the options (metric, rarefaction, DA method), runs it, and points you to the
+`tables/`, `images/`, and `report.md` it produced.
+
 ## Pipeline
 
 1. **Preprocess** — auto-detect counts vs relative; join on `sample_id` (report mismatches,
@@ -24,7 +37,9 @@ and full-name statistics reuse **[scientific-data-viz](../scientific-data-viz)**
 5. **Output** — `tables/*.csv`, `images/*.png,*.pdf` (alpha box, beta PCoA, DA volcano + bar),
    `script/run_amplicon_analysis.py`, and a plain-language `report.md`.
 
-## Usage
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
 
 ```python
 import sys; sys.path.insert(0, "skills/amplicon-analysis")

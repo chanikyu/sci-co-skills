@@ -11,6 +11,17 @@ numbers, then exports an editable vector PDF plus a reproducible script.
 <img src="../../assets/palettes.png" width="66%" alt="Color palettes"/>
 </div>
 
+## 🤖 Use it in Claude
+
+**Describe your data and the figure you want** — Claude picks the right plot, asks which
+palette, renders it, and saves the PNG + editable PDF. For example, just say:
+
+> *"Make a publication box plot of these groups with a Mann-Whitney test."*
+>
+> *"plot a PCoA / forest plot / heatmap from this CSV, journal style"*
+
+The `journal_style` / `stats` modules are what Claude uses under the hood.
+
 ## Features
 
 |  |  |
@@ -31,7 +42,9 @@ Ranking (ordered bar, lollipop) · Paired (slope, difference) · Effect size (fo
 Matrix (heatmap, clustermap, mosaic) · Survival (Kaplan–Meier, cumulative incidence) ·
 Agreement (Bland–Altman) · Multivariate (PCA, UMAP, PCoA) · Flow (Sankey, chord).
 
-## Usage
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
 
 ```python
 import sys; sys.path.insert(0, "skills/scientific-data-viz")
