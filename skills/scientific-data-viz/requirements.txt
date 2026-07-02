@@ -1,0 +1,7 @@
+# Python deps for scientific-data-viz. Install into a venv:
+#   python3 -m venv venv && ./venv/bin/pip install -r requirements.txt
+matplotlib>=3.8
+numpy>=1.24
+scipy>=1.10        # statistics (stats.py) + PCoA/dendrogram
+pandas>=2.0        # loading CSV/Excel, joining table + metadata
+squarify>=0.4      # treemap
