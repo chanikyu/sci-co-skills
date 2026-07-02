@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧪 sci-co-skills
+# 🧪 SciCo-Skills
 
 ### Una colección de **skills de Claude Code** para investigación científica y publicación.
 
@@ -33,8 +33,8 @@ resultados científicos **renderizados por código, exactos y honestos** (divers
 ## 🚀 Instalación
 
 ```bash
-/plugin marketplace add chanikyu/sci-co-skills
-/plugin install sci-co-skills
+/plugin marketplace add chanikyu/SciCo-Skills
+/plugin install SciCo-Skills
 ```
 
 Cada skill declara sus dependencias de Python en `skills/<skill>/requirements.txt`. Se crea un

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧪 sci-co-skills
+# 🧪 SciCo-Skills
 
 ### A collection of **Claude Code skills** for scientific research & publication.
 
@@ -33,8 +33,8 @@ Describe your data in natural language and Claude runs the right skill —
 ## 🚀 Installation
 
 ```bash
-/plugin marketplace add chanikyu/sci-co-skills
-/plugin install sci-co-skills
+/plugin marketplace add chanikyu/SciCo-Skills
+/plugin install SciCo-Skills
 ```
 
 Each skill declares its Python dependencies in `skills/<skill>/requirements.txt`. A virtual

@@ -1,6 +1,6 @@
 # 📊 scientific-data-viz
 
-<sub>[← sci-co-skills](../../README.md) · a skill in the sci-co-skills suite</sub>
+<sub>[← SciCo-Skills](../../README.md) · a skill in the SciCo-Skills suite</sub>
 
 Turn **real data** into **publication-quality journal figures** (Nature / Cell / eLife
 style). Not an AI image generator — it writes `matplotlib` code that renders your **exact**

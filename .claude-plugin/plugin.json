@@ -1,5 +1,5 @@
 {
-  "name": "sci-co-skills",
+  "name": "SciCo-Skills",
   "version": "1.2.0",
   "description": "A collection of Claude Code skills for scientific research and publication. scientific-data-viz — publication-quality, code-rendered journal figures from real data (20 palettes, statistics incl. PERMANOVA). amplicon-analysis — 16S/ITS microbiome pipeline: alpha & beta diversity (PCoA, PERMANOVA) and differential abundance. scientific-workflow-viz — BioRender-style concept-figure image prompts with optional Google Nano Banana (Gemini) rendering.",
   "author": { "name": "kyukyu", "email": "lkcmsd@gmail.com" },

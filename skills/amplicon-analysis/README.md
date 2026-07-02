@@ -1,6 +1,6 @@
 # 🧬 amplicon-analysis
 
-<sub>[← sci-co-skills](../../README.md) · a skill in the sci-co-skills suite</sub>
+<sub>[← SciCo-Skills](../../README.md) · a skill in the SciCo-Skills suite</sub>
 
 The standard **16S/ITS microbiome** workflow, end to end, from a feature table (counts or
 relative abundance) + sample metadata. Diversity/PCoA/PERMANOVA use **scikit-bio**; figures

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧪 sci-co-skills
+# 🧪 SciCo-Skills
 
 ### 一套面向科学研究与论文发表的 **Claude Code skills** 集合。
 
@@ -33,8 +33,8 @@
 ## 🚀 安装
 
 ```bash
-/plugin marketplace add chanikyu/sci-co-skills
-/plugin install sci-co-skills
+/plugin marketplace add chanikyu/SciCo-Skills
+/plugin install SciCo-Skills
 ```
 
 每个 skill 都在 `skills/<skill>/requirements.txt` 中声明其 Python 依赖。首次使用时会自动创建虚拟

@@ -1,6 +1,6 @@
 # 🧫 scientific-workflow-viz
 
-<sub>[← sci-co-skills](../../README.md) · a skill in the sci-co-skills suite</sub>
+<sub>[← SciCo-Skills](../../README.md) · a skill in the SciCo-Skills suite</sub>
 
 Produce a **ready-to-paste image prompt** for a high-quality, **BioRender-style** scientific
 figure — a workflow, pipeline, mechanism, comparison, timeline, or multi-panel infographic.

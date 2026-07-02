@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧪 sci-co-skills
+# 🧪 SciCo-Skills
 
 ### 科学研究と論文発表のための **Claude Code スキル** 集。
 
@@ -33,8 +33,8 @@
 ## 🚀 インストール
 
 ```bash
-/plugin marketplace add chanikyu/sci-co-skills
-/plugin install sci-co-skills
+/plugin marketplace add chanikyu/SciCo-Skills
+/plugin install SciCo-Skills
 ```
 
 各スキルは Python の依存関係を `skills/<skill>/requirements.txt` に宣言します。仮想環境は初回使用時に作成されます。注意: **`amplicon-analysis` には Python ≤ 3.12 が必要です**（scikit-bio）。
