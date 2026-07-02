@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/logo.png" width="150" alt="SciCo-Skills logo"/>
-
 # SciCo-Skills
 
 ### A collection of **Claude Code skills** for scientific research & publication.
@@ -16,8 +14,10 @@
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
 </p>
 
-Describe your data in natural language and Claude runs the right skill —
-**code-rendered, exact, honest** science outputs (diversity, statistics, figures).
+Turn your data into **code-rendered, exact, honest** science outputs —
+diversity, statistics, and publication figures.
+
+📖 **[Read the docs on the Wiki »](https://github.com/chanikyu/SciCo-Skills/wiki)**
 
 </div>
 
@@ -27,9 +27,9 @@ Describe your data in natural language and Claude runs the right skill —
 
 | Skill | What it does |
 |---|---|
-| 🧬 **[amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)** | 16S/ITS microbiome pipeline — preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Powered by scikit-bio; reuses `scientific-data-viz` for the figures. |
-| 📊 **[scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)** | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
-| 🧫 **[scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)** | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
+| 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS microbiome pipeline — alpha & beta diversity (PCoA, PERMANOVA) and differential abundance, with journal figures. |
+| 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | Publication-quality journal figures from real data — exact values, 20 palettes, statistics incl. PERMANOVA. |
+| 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender-style concept-figure image prompts, with optional Google Nano Banana (Gemini) rendering. |
 
 ## 🚀 Installation
 
@@ -38,78 +38,13 @@ Describe your data in natural language and Claude runs the right skill —
 /plugin install SciCo-Skills
 ```
 
-Each skill declares its Python dependencies in `skills/<skill>/requirements.txt`. A virtual
-environment is created on first use. Note: **`amplicon-analysis` needs Python ≤ 3.12** (scikit-bio).
-
----
-
-## 🧬 amplicon-analysis
-
-The standard **16S/ITS microbiome** workflow, end to end, from a feature table
-(counts or relative abundance) + sample metadata:
-
-1. **Preprocess** — auto-detect counts vs relative, join on `sample_id` (report mismatches),
-   filter low-prevalence features, optional seeded rarefaction, CLR.
-2. **Alpha diversity** — observed / Shannon / Simpson / Pielou / Chao1, with a full-name group test.
-3. **Beta diversity** — Bray–Curtis / Jaccard → PCoA (% variance) → **PERMANOVA**.
-4. **Differential abundance** — `clr_test` (default, compositional) · `kruskal_lfc` · `pydeseq2` (optional); BH-FDR.
-5. **Output** — `tables/`, `images/` (journal figures), `script/`, and a plain-language `report.md`.
-
-Diversity/PCoA/PERMANOVA use **scikit-bio**; figures and full-name stat annotations reuse
-`scientific-data-viz`. Honest by design: methods and thresholds stated, multiple testing
-corrected, rarefaction opt-in and reported.
-
-→ Full guide: [`amplicon-analysis`](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis)
-
----
-
-## 📊 scientific-data-viz
-
-Turn real data into **Nature / Cell / eLife-style** figures. Not an AI image generator —
-it writes `matplotlib` code that renders your exact numbers, then exports an editable
-vector PDF plus a reproducible script.
-
-|  |  |
-|---|---|
-| 🎯 **Right plot, automatically** | Intent-based guide maps data shape → the clearest chart |
-| 🎨 **20 palettes** | Colorblind-safe · journal (NPG/AAAS/NEJM/Lancet/JAMA) · many-category (tab20/igv/kelly) |
-| 📈 **Optional statistics** | Full test names, PERMANOVA, Holm-corrected posthoc |
-| 📁 **Structured output** | `images/*.png,*.pdf` + `script/*.py` |
-
-<div align="center">
-<img src="assets/plot_catalogue.png" width="80%" alt="Plot catalogue"/>
-<img src="assets/palettes.png" width="66%" alt="Palettes"/>
-</div>
-
-→ Full guide: [`scientific-data-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz)
-
----
-
-## 🧫 scientific-workflow-viz
-
-BioRender-style **concept-figure image prompts** — workflow, pipeline, mechanism,
-comparison, timeline, or multi-panel infographic — ready to paste into FigureLabs / BioRender
-AI. A 5-step method (analyze → design → components → illustrations → prompt) with a flexible
-layout. **Optionally** render the prompt straight to an image with Google **Nano Banana**
-(Gemini image API) — just provide a key.
-
-Use this for schematics/diagrams (no data behind them); use `scientific-data-viz` to plot real data.
-
-→ Full guide: [`scientific-workflow-viz`](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz)
-
----
-
-## 🔬 Design philosophy
-
-- **Exact, not approximate** — data figures are code-rendered; values are never fabricated.
-- **Honest statistics** — the test used is named in full; corrections applied; nothing invented.
-- **Reproducible** — every run emits the script and editable vector outputs.
-- **Composable** — skills reuse each other (amplicon-analysis renders through scientific-data-viz).
+Full setup and per-skill guides are on the **[Wiki](https://github.com/chanikyu/SciCo-Skills/wiki)**
+(`amplicon-analysis` needs Python ≤ 3.12).
 
 ---
 
 <div align="center">
 
-Made for reproducible science with [Claude Code](https://claude.com/claude-code) · [MIT](LICENSE) licensed
+[Documentation](https://github.com/chanikyu/SciCo-Skills/wiki) · [MIT](LICENSE) · made for reproducible science with [Claude Code](https://claude.com/claude-code)
 
 </div>
