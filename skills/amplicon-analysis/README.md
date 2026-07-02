@@ -6,6 +6,10 @@ The standard **16S/ITS microbiome** workflow, end to end, from a feature table (
 relative abundance) + sample metadata. Diversity/PCoA/PERMANOVA use **scikit-bio**; figures
 and full-name statistics reuse **[scientific-data-viz](../scientific-data-viz)**.
 
+<div align="center">
+<img src="../../assets/amplicon_workflow.png" width="92%" alt="amplicon-analysis pipeline: input → preprocess → alpha / beta / differential abundance → output"/>
+</div>
+
 ## Pipeline
 
 1. **Preprocess** — auto-detect counts vs relative; join on `sample_id` (report mismatches,
