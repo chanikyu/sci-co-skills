@@ -1,0 +1,11 @@
+# Conda environment for amr-profiling. Create once, run tools via `conda run -n scico-amr`:
+#   conda env create -f environment.yml
+#
+name: scico-amr
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - ncbi-amrfinderplus   # AMR genes + point mutations (needs its DB: `amrfinder -u`)
+  - abricate             # AMR (CARD/ResFinder) + virulence (VFDB) + plasmid (PlasmidFinder); DBs bundled

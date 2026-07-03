@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.3.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.4.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -31,6 +31,9 @@ Describe your data in natural language and Claude runs the right skill —
 |---|---|
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS microbiome pipeline — FASTQ (DADA2) or feature table → preprocess → **alpha** & **beta** diversity (distance, PCoA, PERMANOVA) → **differential abundance** — with journal figures. Enter at any stage; powered by scikit-bio; reuses `scientific-data-viz`. |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | Shotgun metagenomics — QC + host removal → **read-based** profiling (MetaPhlAn / Kraken2+Bracken, HUMAnN) **or** **assembly-based** MAGs (MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → diversity & **differential abundance**. Reuses the amplicon-analysis core. |
+| 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | Bacterial **isolate genome** backbone — FASTQ or contigs → QC → assembly (SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → **assembly QC** (QUAST, CheckM2) → annotation (Bakta/Prokka) → **species ID** (GTDB-Tk/ANI). Enter at any stage. |
+| 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | Strain typing of assembled genomes — **MLST** sequence type (mlst), optional **serotyping** (SISTR/ECTyper) and **cgMLST** (chewBBACA). |
+| 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | Screen assembled genomes for **AMR genes**, **virulence factors**, and **plasmid replicons** — AMRFinderPlus + abricate (CARD/ResFinder, VFDB, PlasmidFinder). |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
 

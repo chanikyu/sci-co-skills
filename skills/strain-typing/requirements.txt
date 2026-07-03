@@ -1,0 +1,2 @@
+# strain-typing uses conda (see environment.yml) — mlst / sistr_cmd / ectyper / chewbbaca
+# are bioinformatics tools, not on PyPI. No pure-Python deps required.

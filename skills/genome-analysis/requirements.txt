@@ -1,0 +1,6 @@
+# genome-analysis uses conda (see environment.yml) — the tools (fastp, spades, unicycler,
+# flye, quast, checkm2, bakta, prokka, gtdb-tk, fastani) are not on PyPI. Python-only deps for
+# optional summary figures:
+matplotlib>=3.8
+pandas>=2.0
+# Reuses sibling skill scientific-data-viz for figures.

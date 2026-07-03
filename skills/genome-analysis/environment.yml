@@ -1,0 +1,33 @@
+# One conda environment for the bacterial isolate genome backbone.
+# Create once, then the skill runs tools via `conda run -n scico-genome <cmd>`:
+#   conda env create -f environment.yml      # or: mamba env create -f ...
+#
+name: scico-genome
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  # --- QC + assembly ---
+  - fastp                # read trimming
+  # Illumina short-read assemblers
+  - spades               # SPAdes (standard Illumina isolate)
+  - unicycler            # SPAdes wrapper + circularization; also HYBRID (short+long)
+  - shovill              # fast SPAdes/SKESA wrapper
+  - skesa                # conservative, accurate
+  # long-read assemblers (Nanopore/PacBio)
+  - flye                 # standard long-read
+  - canu                 # high-quality, slow
+  - raven                # fast
+  # --- assembly QC ---
+  - quast                # contiguity (N50, #contigs, length)
+  - checkm2              # completeness / contamination (DB user-provided)
+  # --- annotation ---
+  - bakta                # annotation (DB ~30-70 GB, user-provided)
+  - prokka               # annotation (bundles its own DBs; no path needed)
+  # --- species identification ---
+  - gtdbtk               # genome taxonomy (GTDB DB ~100 GB, user-provided)
+  - fastani              # ANI vs a reference-genome list (alternative)
+  # --- figures (optional summaries) ---
+  - matplotlib
+  - pandas

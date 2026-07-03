@@ -1,0 +1,2 @@
+# amr-profiling uses conda (see environment.yml) — ncbi-amrfinderplus / abricate are
+# bioinformatics tools, not on PyPI. No pure-Python deps required.

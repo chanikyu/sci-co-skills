@@ -1,0 +1,13 @@
+# Conda environment for strain-typing. Create once, run tools via `conda run -n scico-typing`:
+#   conda env create -f environment.yml
+#
+name: scico-typing
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - mlst                 # MLST sequence type (bundled schemes)
+  - sistr_cmd            # Salmonella serotyping
+  - ectyper              # E. coli serotyping
+  - chewbbaca            # cgMLST allele calling (user-provided scheme)
