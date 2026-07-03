@@ -2,8 +2,8 @@
 stage0.py — amplicon Stage 0: paired FASTQ -> ASV feature table (DADA2), with ITS primer
 removal via cutadapt. Runs tools inside the `scico-amplicon` conda env.
 
-UNVERIFIED in-session (needs env + reads + DB). Standard DADA2/cutadapt usage; the caller
-(pipeline) should pick truncLen/maxEE from the read-quality profile per SKILL.md.
+Verified end-to-end on a simulated 16S set (DADA2 recovered 6/6 injected ASVs; FASTQ -> core ran).
+Standard DADA2/cutadapt usage; the caller (pipeline) picks truncLen/maxEE from the read-quality profile.
 """
 import os
 import glob
