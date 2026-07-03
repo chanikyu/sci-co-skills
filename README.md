@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.4.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.5.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -36,6 +36,7 @@ Describe your data in natural language and Claude runs the right skill —
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | Screen assembled genomes for **AMR genes**, **virulence factors**, and **plasmid replicons** — AMRFinderPlus + abricate (CARD/ResFinder, VFDB, PlasmidFinder). |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | Publication-quality journal figures from real data — code-rendered so every value is exact. 20 palettes, legends outside, optional statistics (t / ANOVA / Mann–Whitney / Kruskal / correlation / log-rank / **PERMANOVA**), structured `images/` + `script/` output. |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender-style **concept-figure image prompts** (workflow / mechanism / comparison), with optional direct rendering via Google **Nano Banana** (Gemini image API). |
+| 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | Autonomously **build a new bioinformatics tool** from a research goal — deep paper/tool survey → algorithm design → feasibility → **honest benchmark vs the real competitors** (closer to ground truth), conda-isolated, two-lens review, low-friction CLI. Reports only at 4 gates. |
 
 ## 🚀 Quick start
 
@@ -52,6 +53,7 @@ Full setup on the [Installation](https://github.com/chanikyu/SciCo-Skills/wiki/I
 - **Honest statistics** — the test used is named in full; corrections applied; nothing invented.
 - **Reproducible** — every run emits the script and editable vector outputs.
 - **Composable** — skills reuse each other (amplicon-analysis renders through scientific-data-viz).
+- **Effortless** — tools are built low-friction (one-command CLIs, sensible defaults, standard IO).
 
 ---
 

@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.4.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.5.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -36,6 +36,7 @@
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | アセンブリゲノムから AMR遺伝子・ビルレンス因子・プラスミドレプリコンをスクリーニング — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 種類のパレット、凡例を図の外側に配置、任意の統計処理（t 検定 / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルの **コンセプト図イメージプロンプト**（ワークフロー / メカニズム / 比較）。任意で Google の **Nano Banana**（Gemini 画像 API）による直接描画にも対応。 |
+| 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 研究目標から新しいバイオインフォマティクスツールを自律的に構築 — 論文・ツールの深い調査 → アルゴリズム設計 → 実現可能性 → 実際の競合ツールとの正直なベンチマーク(真の値により近く)、conda隔離、2レンズレビュー、低摩擦CLI。4つのゲートでのみ報告。 |
 
 ## 🚀 Quick start
 
@@ -52,6 +53,7 @@
 - **誠実な統計** — 使用した検定を正式名称で明記し、補正を適用し、何も創作しません。
 - **再現可能** — 実行するたびにスクリプトと編集可能なベクター出力を生成します。
 - **組み合わせ可能** — スキルは互いを再利用します（amplicon-analysis は scientific-data-viz を通じて描画します）。
+- **Effortless** — ツールは低摩擦に構築(ワンコマンドCLI、妥当なデフォルト、標準IO)。
 
 ---
 
