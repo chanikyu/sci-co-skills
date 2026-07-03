@@ -37,6 +37,16 @@ Claude confirms the options (metric, rarefaction, DA method), runs it, and point
 5. **Output** — `tables/*.csv`, `images/*.png,*.pdf` (alpha box, beta PCoA, DA volcano + bar),
    `script/run_amplicon_analysis.py`, and a plain-language `report.md`.
 
+## Example output
+
+Real 3-panel result from a demo run (30 samples, Healthy vs Disease) — **A** alpha diversity
+(Shannon), **B** beta diversity (Bray–Curtis PCoA + PERMANOVA), **C** differential abundance
+(CLR volcano). Code-rendered through `scientific-data-viz`, so every value is exact.
+
+<div align="center">
+<img src="../../assets/amplicon-example.png" width="96%" alt="amplicon-analysis result: alpha diversity, beta PCoA with PERMANOVA, differential-abundance volcano"/>
+</div>
+
 ## Run it directly (Python)
 
 The skill runs this for you; you can also run it yourself:
