@@ -297,6 +297,47 @@ def jitter(x_center, n, width=0.11, rng=None):
 
 
 # ---- output -----------------------------------------------------------------
+def confidence_ellipse(ax, x, y, n_std=2.0, facecolor="none", edgecolor=None,
+                       alpha=0.3, lw=1.0, **kwargs):
+    """Covariance-based confidence ellipse for 2D points (x, y). n_std=2 ≈ 95%.
+    Fill uses `alpha` (default 0.3); the edge stays solid. Needs ≥ 3 points; returns the
+    Ellipse patch or None. Use on ordination scatters (PCoA / PCA)."""
+    import numpy as np
+    from matplotlib.patches import Ellipse
+    from matplotlib.colors import to_rgba
+    import matplotlib.transforms as transforms
+    x = np.asarray(x, float); y = np.asarray(y, float)
+    if x.size < 3:
+        return None
+    cov = np.cov(x, y)
+    if not np.all(np.isfinite(cov)) or cov[0, 0] <= 0 or cov[1, 1] <= 0:
+        return None
+    pear = cov[0, 1] / np.sqrt(cov[0, 0] * cov[1, 1])
+    rx, ry = np.sqrt(1 + pear), np.sqrt(1 - pear)
+    fc = "none" if facecolor in (None, "none") else to_rgba(facecolor, alpha)
+    ec = edgecolor if edgecolor is not None else (facecolor if facecolor not in (None, "none") else "grey")
+    ell = Ellipse((0, 0), width=rx * 2, height=ry * 2, facecolor=fc, edgecolor=ec, lw=lw, **kwargs)
+    tr = (transforms.Affine2D().rotate_deg(45)
+          .scale(np.sqrt(cov[0, 0]) * n_std, np.sqrt(cov[1, 1]) * n_std)
+          .translate(np.mean(x), np.mean(y)))
+    ell.set_transform(tr + ax.transData)
+    ax.add_patch(ell)
+    return ell
+
+
+def group_ellipses(ax, coords, groups, colors=None, n_std=2.0, alpha=0.3, lw=1.0):
+    """Draw one confidence ellipse per group on an ordination scatter (e.g. PCoA).
+    coords: (n, 2); groups: length-n labels; colors: {group: color} (or None)."""
+    import numpy as np
+    coords = np.asarray(coords, float)
+    groups = np.asarray(groups)
+    for g in dict.fromkeys(groups):
+        m = groups == g
+        c = (colors or {}).get(g)
+        confidence_ellipse(ax, coords[m, 0], coords[m, 1], n_std=n_std,
+                           facecolor=c if c else "none", alpha=alpha, lw=lw, zorder=0)
+
+
 def prepare_output(base):
     """Create the standard output layout <base>/images and <base>/script and
     return (images_dir, script_dir). Save figures into images/, the .py into script/."""

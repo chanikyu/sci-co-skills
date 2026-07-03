@@ -70,6 +70,7 @@ def beta_figure(coords, var, groups, permanova_res, out_stem, palette="okabe_ito
         m = g == lab
         ax.scatter(coords[m, 0], coords[m, 1], s=34, color=gcol[lab], edgecolor="k",
                    lw=0.4, label=lab, zorder=3)
+    J.group_ellipses(ax, coords[:, :2], g, colors=gcol, n_std=2.0, alpha=0.3)
     ax.axhline(0, color="#dddddd", lw=0.8, zorder=0); ax.axvline(0, color="#dddddd", lw=0.8, zorder=0)
     ax.set_xlabel(J.var_label("PCoA1", var[0])); ax.set_ylabel(J.var_label("PCoA2", var[1]))
     ax.set_title("Beta diversity (PCoA)")
