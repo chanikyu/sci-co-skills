@@ -39,10 +39,11 @@ Claude confirms the options (metric, rarefaction, DA method), runs it, and point
 
 ## Example output
 
-Example 3-panel result from a demo run on **synthetic test data** (30 samples, Healthy vs Disease) —
-**A** alpha diversity (Shannon), **B** beta diversity (Bray–Curtis PCoA + PERMANOVA), **C** differential
-abundance (CLR volcano). The values are really computed (scikit-bio PCoA/PERMANOVA, CLR + BH-FDR) and
-code-rendered exactly by `scientific-data-viz` — but the input is **simulated demo data, not a real experiment**.
+Example 4-panel result from the **full FASTQ → DADA2 → taxonomy → diversity → differential** pipeline on
+**synthetic 16S data** (10 samples, Healthy vs Disease) — **A** taxonomic composition (genus), **B** alpha
+diversity (Shannon), **C** beta diversity (Bray–Curtis PCoA + PERMANOVA), **D** differential abundance by
+genus. Every value is really computed (DADA2 denoise + assignTaxonomy, scikit-bio PCoA/PERMANOVA, CLR + BH-FDR)
+and code-rendered exactly by `scientific-data-viz` — the input is **simulated demo data, not a real experiment**.
 
 <div align="center">
 <img src="../../assets/amplicon-example.png" width="96%" alt="amplicon-analysis result: alpha diversity, beta PCoA with PERMANOVA, differential-abundance volcano"/>
