@@ -11,6 +11,12 @@ The primary output is a TEXT PROMPT (paste into FigureLabs / BioRender AI / any 
 > use this for schematics/diagrams (no data behind them); use `scientific-data-viz` to plot
 > real data.
 
+<p align="center">
+<img src="../../assets/scientific-workflow-viz-example.png" width="92%" alt="Example figure produced from a scientific-workflow-viz prompt — a BioRender-style scientific workflow infographic"/>
+</p>
+
+<p align="center"><sub>Example output — a figure rendered from a scientific-workflow-viz prompt.</sub></p>
+
 ## 🤖 Use it in Claude
 
 **Describe the method or process** you want to visualize — Claude writes the ready-to-paste
