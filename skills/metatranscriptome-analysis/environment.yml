@@ -1,0 +1,26 @@
+# One conda environment for the metatranscriptome pipeline (front stages + core).
+# Create once, then the skill runs tools via `conda run -n scico-metatx <cmd>`:
+#   conda env create -f environment.yml
+#
+name: scico-metatx
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  # --- QC + host removal ---
+  - fastp
+  - bowtie2
+  - samtools
+  # --- rRNA removal (metatranscriptome-specific) ---
+  - sortmerna            # remove rRNA reads (SILVA/Rfam refs)
+  # --- profiling of the active community ---
+  - humann               # expressed pathways / gene families (large DBs)
+  - metaphlan            # active taxa (marker DB ~ few GB)
+  # --- core: diversity + differential abundance + figures (reused) ---
+  - scikit-bio
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  - squarify

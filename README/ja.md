@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.5.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.6.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -34,6 +34,8 @@
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | 細菌分離株ゲノムのバックボーン — FASTQ または contigs → QC → アセンブリ(SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → アセンブリQC(QUAST, CheckM2) → アノテーション(Bakta/Prokka) → 菌種同定(GTDB-Tk/ANI)。任意のステージから開始可能。 |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | アセンブリゲノムの株タイピング — MLST sequence type(mlst)、オプションで serotyping(SISTR/ECTyper)と cgMLST(chewBBACA)。 |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | アセンブリゲノムから AMR遺伝子・ビルレンス因子・プラスミドレプリコンをスクリーニング — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
+| 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | バルク RNA-seq — FASTQ または count matrix → QC → 定量(Salmon/kallisto/STAR、--aligner) → 差次的発現(pydeseq2) → エンリッチメント、PCA/volcano/heatmap。任意のステージから開始可能。 |
+| 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群集 RNA-seq — QC + 宿主除去 → rRNA除去(SortMeRNA) → 機能(HUMAnN)・分類(MetaPhlAn)プロファイリング(活性群集) → 多様性 & 差次的存在量。shotgun+amplicon のコアを再利用。 |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 実データから作る論文品質のジャーナル図 — コードで描画するため、すべての値が正確です。20 種類のパレット、凡例を図の外側に配置、任意の統計処理（t 検定 / ANOVA / Mann–Whitney / Kruskal / 相関 / log-rank / **PERMANOVA**）、構造化された `images/` + `script/` 出力。 |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender スタイルの **コンセプト図イメージプロンプト**（ワークフロー / メカニズム / 比較）。任意で Google の **Nano Banana**（Gemini 画像 API）による直接描画にも対応。 |
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 研究目標から新しいバイオインフォマティクスツールを自律的に構築 — 論文・ツールの深い調査 → アルゴリズム設計 → 実現可能性 → 実際の競合ツールとの正直なベンチマーク(真の値により近く)、conda隔離、2レンズレビュー、低摩擦CLI。4つのゲートでのみ報告。 |

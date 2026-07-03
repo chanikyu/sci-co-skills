@@ -1,0 +1,9 @@
+# metatranscriptome-analysis uses conda (see environment.yml) — the tools (fastp, bowtie2,
+# sortmerna, metaphlan, humann) are not on PyPI. Python-only deps for the reused downstream core:
+scikit-bio>=0.6
+matplotlib>=3.8
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+squarify>=0.4
+# Reuses sibling skills shotgun-analysis (front-stage patterns) and amplicon-analysis (core) + scientific-data-viz.

@@ -1,0 +1,25 @@
+# One conda environment for the bulk RNA-seq pipeline.
+# Create once, then the skill runs tools via `conda run -n scico-transcriptome <cmd>`:
+#   conda env create -f environment.yml
+#
+name: scico-transcriptome
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  # --- QC + quantification ---
+  - fastp                # read trimming
+  - salmon               # alignment-free quant (transcriptome index)
+  - kallisto             # alignment-free quant
+  - star                 # splice-aware genome aligner
+  - subread              # featureCounts (with STAR)
+  # --- differential expression + enrichment ---
+  - pydeseq2             # DESeq2 model in Python (counts -> DE)
+  - gseapy               # GSEA / GO / KEGG enrichment
+  # --- core (figures reuse scientific-data-viz) ---
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn         # PCA
