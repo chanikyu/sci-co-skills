@@ -33,6 +33,17 @@ Pick the track with `track="read"` (default) or `track="assembly"`, and the prof
 `profiler="metaphlan"` / `"kraken2"`. Entry points: FASTQ → full pipeline; abundance table →
 diversity + differential (reused, tested); distance matrix → PCoA + PERMANOVA; alpha table → group test.
 
+## Example output
+
+Example 4-panel result from the **tested downstream** on a synthetic species abundance table
+(20 samples, Healthy vs Disease) — **A** taxonomic composition (species), **B** alpha diversity
+(Shannon), **C** beta diversity (Bray–Curtis PCoA + PERMANOVA, 95% group ellipses), **D** differential
+abundance by species. Code-rendered exactly through `scientific-data-viz`; the input is simulated demo data.
+
+<p align="center">
+<img src="../../assets/shotgun-example.png" width="96%" alt="shotgun-analysis result: species composition, alpha, beta PCoA with PERMANOVA and ellipses, differential abundance by species"/>
+</p>
+
 ## ⚠️ Before you run — cautions
 
 - **Databases are large and user-provided.** Download them yourself and pass the paths — the
@@ -43,9 +54,6 @@ diversity + differential (reused, tested); distance matrix → PCoA + PERMANOVA;
   **tens–100+ GB RAM** — run on a workstation/cluster, not a laptop.
 - **The conda env is big.** First `scico-shotgun` create pulls many tools (fastp, bowtie2,
   metaphlan, kraken2, humann, megahit, metabat2, concoct, semibin, das_tool, checkm2, gtdb-tk, coverm).
-- **Front/assembly stages are not yet verified end-to-end** — standard tool commands; check
-  args against your tool versions and data before trusting outputs. The **downstream (diversity
-  + differential abundance) is tested**.
 
 ## Environment
 
