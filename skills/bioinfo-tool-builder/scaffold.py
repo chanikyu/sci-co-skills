@@ -40,6 +40,21 @@ Preserve specs so the build is reproducible even if envs are removed.
 _(exact command + version + params for each SOTA baseline)_
 """
 
+_PLAN = """# Implementation plan — {tool}
+
+Build order (dependency order, smallest pieces first; **build the riskiest item first**):
+
+| # | Module / file | Purpose | Depends on | Done when (test passes) |
+|---|---------------|---------|------------|-------------------------|
+| 1 |               |         | —          |                         |
+| 2 |               |         |            |                         |
+
+- **Riskiest assumption** de-risked by item #: __
+- **POC** = the items needed to test that assumption on tiny known-answer data.
+- **Reuse (don't hand-roll):** standard libs / existing tools — __
+- **CLI (required deliverable):** `{tool} <input> [options]` → result; `--help`.
+"""
+
 
 def scaffold(project_dir, tool_name, goal=""):
     """Create <project_dir> with the standard layout + skeleton report.md and package/MANIFEST.md."""
@@ -49,4 +64,6 @@ def scaffold(project_dir, tool_name, goal=""):
         fh.write(_REPORT.format(tool=tool_name, goal=goal or "(describe)"))
     with open(os.path.join(project_dir, "package", "MANIFEST.md"), "w") as fh:
         fh.write(_MANIFEST.format(tool=tool_name))
+    with open(os.path.join(project_dir, "design", "plan.md"), "w") as fh:
+        fh.write(_PLAN.format(tool=tool_name))
     return project_dir

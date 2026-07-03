@@ -95,6 +95,11 @@ report the resource estimate and confirm (suite convention).
 - State the specific limitation exploited (the differentiator).
 - Design the algorithm + **complexity analysis** + **IO/format contract** (FASTA/FASTQ/BAM/VCF/GFF).
 - List assumptions + failure modes; pick the **riskiest assumption**. Write `design/`.
+- Write an explicit **implementation plan** `design/plan.md` — the **build order** (module by module,
+  in dependency order), each item's **dependency** + **done-criterion (the test that must pass)**, and
+  which item **de-risks the riskiest assumption first**. Keep pieces small (KISS); note which standard
+  libraries to reuse instead of hand-rolling; the CLI is a listed deliverable. The POC (Phase 3) builds
+  the riskiest item first.
 - → **Flow review (lens A) BEFORE any coding** (see Review layer).
 
 ### Phase 3 — Feasibility (de-risk first)
@@ -216,7 +221,7 @@ Same phases + gates; these ML-specific rules apply on top.
 <project>/
   spec/       problem_def.md, benchmark/ (data + ground truth + metric)
   survey/     papers.md, tools.md, taxonomy.md, sota_baseline.md
-  design/     algorithm.md (+ complexity, IO contract), risks.md, flow_review.md
+  design/     algorithm.md (+ complexity, IO contract), plan.md (build order + done-criteria), risks.md, flow_review.md
   poc/        code + results_vs_baseline.md, code_review.md
   scaleup/    implementation/, benchmark_report.md
   package/    environment.yml (pinned), tests/, MANIFEST.md (envs + data provenance), docs
@@ -238,7 +243,7 @@ scaffold.scaffold("/path/to/project", tool_name="my-tool", goal="…")
 2. **Phase 0** — problem_def + benchmark (truth tiers). → G1 if not evaluable.
 3. **Phase 1** — parallel-subagent survey → taxonomy + SOTA + gap. → **G2** reuse / wrap / build
    (resolve before any POC).
-4. **Phase 2** — algorithm + complexity + IO contract + riskiest assumption. → **flow review**.
+4. **Phase 2** — algorithm + complexity + IO contract + **implementation plan (`plan.md`)** + riskiest assumption. → **flow review**.
 5. **Phase 3** — dev env; de-risk; POC; vs baseline. → **code review** → G3 Go/No-Go.
 6. **Phase 4** — scale-up; held-out; package; MANIFEST. → **code + flow review** → G4 report.
 7. **Cleanup** — offer to remove transient baseline/simulator envs (specs preserved); keep dev env.
