@@ -14,6 +14,17 @@ design as the other SciCo skills: conda-managed tools, structured output + logs,
 | **Serotyping** (optional) | SISTR / ECTyper | organism-specific (Salmonella / E. coli / …) |
 | **cgMLST** (optional) | chewBBACA | needs a user-provided scheme; precise epi typing |
 
+## Example output
+
+Example typing of 12 isolates (**simulated demo data**) — **A** MLST 7-locus allele profiles → sequence
+type (ST) calls (isolates with identical profiles group into STs; single-locus variants are shown), **B**
+cgMLST allelic-distance clustering into outbreak clades. Code-rendered by
+[scientific-data-viz](../scientific-data-viz).
+
+<p align="center">
+<img src="../../assets/strain-typing-example.png" width="96%" alt="strain-typing result: MLST allele profiles with ST calls, cgMLST clustering dendrogram"/>
+</p>
+
 ## 🤖 Use it in Claude
 
 > *"MLST-type these assemblies."*

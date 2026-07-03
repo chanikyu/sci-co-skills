@@ -18,6 +18,16 @@ output + logs, honest calls.
 
 Batch runs get an abricate **presence/absence summary** across genomes per database.
 
+## Example output
+
+Example screen of 12 isolates (**simulated demo data**) — **A** resistome: AMR gene presence/absence
+grouped and colored by antibiotic class; **B** virulence factors and plasmid replicons. Shade = %
+identity of the hit. Code-rendered by [scientific-data-viz](../scientific-data-viz).
+
+<p align="center">
+<img src="../../assets/amr-profiling-example.png" width="96%" alt="amr-profiling result: resistome heatmap by drug class, virulence and plasmid presence"/>
+</p>
+
 ## 🤖 Use it in Claude
 
 > *"Screen these assemblies for AMR, virulence, and plasmids."*
