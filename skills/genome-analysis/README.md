@@ -26,6 +26,17 @@ Enter at any stage: **FASTQ → full pipeline; contigs FASTA → from assembly Q
 >
 > *"run genome-analysis on contigs.fasta — QUAST + CheckM2 + Bakta + GTDB-Tk"*
 
+## Example output
+
+Real run — QC → SPAdes assembly → QUAST → prodigal on simulated reads from a real reference
+(*M. genitalium*, 580 kb): **A** assembly contiguity (2 contigs, N50 410 kb, **99.7% of the genome
+recovered**), **B** contig sizes, **C** assembly vs reference (matching GC). Code-rendered exactly by
+`scientific-data-viz`. (Species ID via GTDB-Tk and CheckM2 use large user-provided DBs — not shown.)
+
+<p align="center">
+<img src="../../assets/genome-example.png" width="96%" alt="genome-analysis result: assembly contiguity, contig sizes, assembly vs reference (matching GC)"/>
+</p>
+
 ## ⚠️ Before you run — cautions
 
 - **Databases are large and user-provided:** **GTDB-Tk ~100 GB**, Bakta ~30–70 GB, CheckM2
