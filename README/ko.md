@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.6.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.7.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -36,6 +36,8 @@
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | 조립 유전체에서 AMR 유전자·병원성 인자·플라스미드 replicon 스크리닝 — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder). |
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | Bulk RNA-seq — FASTQ 또는 count matrix → QC → 정량(Salmon/kallisto/STAR, --aligner) → 차등발현(pydeseq2) → enrichment, PCA/volcano/heatmap. 어느 단계로도 진입. |
 | 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 군집 RNA-seq — QC + host 제거 → rRNA 제거(SortMeRNA) → 기능(HUMAnN)·분류(MetaPhlAn) 프로파일링(활성 군집) → 다양성 & 차등존재비. shotgun+amplicon 코어 재사용. |
+| ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | 주석된 피처 테이블에서 시작하는 메타볼로믹스 — 필터링/대치 → PQN → log+Pareto → 단변량(BH-FDR, 볼케이노) → PCA / PLS-DA + VIP + 순열검정 → 히트맵; 선택적 경로 ORA. |
+| 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | 짝지어진 메타지놈 + 메타전사체 + 메타볼롬 통합 — 오믹스별 CLR/log → PERMANOVA → 오믹스 간 Spearman 네트워크(BH-FDR) → Procrustes/Mantel 일치도; 선택적 MOFA+. |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 실제 데이터로 만드는 논문 품질의 저널 그림 — 코드로 렌더링되어 모든 값이 정확합니다. 20종 팔레트, 범례 바깥 배치, 선택적 통계(t / ANOVA / Mann–Whitney / Kruskal / 상관 / log-rank / **PERMANOVA**), 체계적인 `images/` + `script/` 출력. |
 | 🧫 [scientific-workflow-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-workflow-viz) | BioRender 스타일의 **개념도 이미지 프롬프트**(워크플로우 / 메커니즘 / 비교), 선택적으로 Google **Nano Banana**(Gemini 이미지 API)를 통한 직접 렌더링 지원. |
 | 🛠️ [bioinfo-tool-builder](https://github.com/chanikyu/SciCo-Skills/wiki/bioinfo-tool-builder) | 연구 목표로부터 새 생물정보 도구를 자동으로 개발 — 논문·도구 심층 조사 → 알고리즘 설계 → 타당성 → 실제 경쟁툴 대비 정직한 벤치마크(정답에 더 가깝게), conda 격리, 2렌즈 리뷰, 저마찰 CLI. 4개 게이트에서만 보고. |

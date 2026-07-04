@@ -1,0 +1,11 @@
+# Microbiome multi-omics integration (see environment.yml for the conda env). Core Python deps:
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-bio>=0.6      # CLR (multi_replace), Mantel, PERMANOVA, permdisp, PCoA
+statsmodels>=0.14
+scikit-learn>=1.3
+matplotlib>=3.8
+networkx>=3.0
+# optional: mofapy2   # MOFA+ shared latent factors (do_mofa=True); DIABLO is R-only and not bundled.
+# Reuses sibling skill scientific-data-viz for figures.

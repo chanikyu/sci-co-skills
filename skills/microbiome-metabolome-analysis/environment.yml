@@ -1,0 +1,18 @@
+# One conda environment for the metabolomics statistics pipeline (pure Python — no external CLI tools).
+# Create once, then the skill runs via `conda run -n scico-metabolome`:
+#   conda env create -f environment.yml
+#
+name: scico-metabolome
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - scipy            # univariate tests (t / Mann-Whitney / ANOVA / Kruskal)
+  - statsmodels      # BH-FDR (multipletests)
+  - scikit-learn     # PCA, PLS-DA (PLSRegression), KNN imputation
+  - matplotlib       # figures (reuse scientific-data-viz)
+  - pip
+  - pip:
+      - gseapy       # optional: ORA enrichment (only when KEGG/HMDB IDs available)

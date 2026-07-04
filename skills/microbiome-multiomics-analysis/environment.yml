@@ -1,0 +1,21 @@
+# One conda environment for microbiome multi-omics integration (reliable core is pure Python).
+# Create once, then the skill runs via `conda run -n scico-multiomics`:
+#   conda env create -f environment.yml
+#
+name: scico-multiomics
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - scipy            # Spearman, Procrustes, distances
+  - scikit-bio       # CLR, Mantel, PERMANOVA, permdisp, PCoA
+  - statsmodels      # BH-FDR (multipletests)
+  - scikit-learn     # optional concatenated-CLR PLS-DA
+  - matplotlib       # figures (reuse scientific-data-viz)
+  - networkx         # correlation network
+  - pip
+  - pip:
+      - mofapy2       # optional: MOFA+ shared factors (do_mofa=True)
