@@ -119,10 +119,34 @@ report the resource estimate and confirm (suite convention).
 
 ## Deep survey — how to fan out
 
-Launch several subagents **in parallel** (one message, multiple Agent calls). Give each a distinct
-lens (one search angle each: by method family, by tool registry, by benchmark, by application).
-Each returns a small structured summary, not raw dumps. Synthesize into the taxonomy + SOTA + gap.
-A completeness critic subagent asks "what's missing?" and its gaps become another round.
+Launch subagents **in parallel** (one message, multiple Agent calls). Give each a distinct lens (one
+search angle each: by method family, by tool registry, by benchmark, by application). **Right-size the
+fan-out to the goal** — a small, well-scoped goal needs 1–2 lenses; a broad/novel one gets the full
+set (don't over-spawn). Each returns a **small structured summary — hard cap: the extracted decision,
+not raw dumps**. Run these collection/extraction lenses on the **cheap tier** (see Model tiering).
+Synthesize into the taxonomy + SOTA + gap. A completeness critic subagent asks "what's missing?" and
+its gaps become another round (cap the rounds).
+
+## Model tiering (token efficiency — same quality, fewer tokens)
+
+Subagents inherit the main (expensive) model unless told otherwise — the **#1 avoidable cost**. Set
+the Agent `model` per role: `model: "haiku"` for **mechanical** work, the default (session) model for
+**judgment**, the top tier only for the trust-critical claim. Mechanical extraction/execution does not
+need a frontier model, so this is **quality-neutral** (fewer tokens, same result).
+
+| Subagent role | Tier | Why |
+|---|---|---|
+| Phase 1 survey — paper/tool collection + structured extraction | **haiku** | reading + extracting to a schema is mechanical |
+| Running benchmarks / competitor tools, fetching data, format & sanity checks | **haiku** | executing + reporting numbers |
+| Completeness critic ("what's missing?") | **haiku** | scanning a list for coverage gaps |
+| Phase 2 algorithm design, complexity, IO contract | **default** | core reasoning |
+| Flow review (lens A) + code review (lens B) | **default** | catches the real defects — don't cheap out |
+| **Adversarial verify** of a "beats the competitors" claim | **default → top** | trust-critical; use the strongest model |
+| Final synthesis / gate decisions | **default** (main loop) | you decide the gates |
+
+Mechanical fan-out (usually the majority of subagents) → **haiku**. **NEVER** downgrade the adversarial
+verifier or the final honest-benchmark judgment to save tokens — that is the value, not the waste. For
+small diffs combine both review lenses into **one** agent; keep them separate for large ones.
 
 ## Code simplicity (mandate)
 
@@ -135,7 +159,9 @@ A completeness critic subagent asks "what's missing?" and its gaps become anothe
 
 ## Review layer (two lenses, independent subagents)
 
-CRITICAL / HIGH findings **block the next gate** until fixed.
+CRITICAL / HIGH findings **block the next gate** until fixed. Run reviews on the default model, scope
+them to the **diff** (don't re-review unchanged code), and combine both lenses into one agent for
+small changes (see Model tiering).
 
 - **A — Pipeline-flow review (logic / architecture):** algorithm sound? assumptions valid?
   complexity OK for target scale? data flow correct, **no train/test leakage**, benchmark fair, SOTA
