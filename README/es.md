@@ -44,7 +44,7 @@ resultados científicos **renderizados por código, exactos y honestos** (divers
 
 ```
 /plugin marketplace add chanikyu/SciCo-Skills
-/plugin install SciCo-Skills
+/plugin install scico-skills
 ```
 
 Configuración completa en la página de [Instalación](https://github.com/chanikyu/SciCo-Skills/wiki/Installation).

@@ -44,7 +44,7 @@
 
 ```
 /plugin marketplace add chanikyu/SciCo-Skills
-/plugin install SciCo-Skills
+/plugin install scico-skills
 ```
 
 전체 설정은 [Installation](https://github.com/chanikyu/SciCo-Skills/wiki/Installation) 페이지를 참고하세요.

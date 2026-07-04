@@ -44,7 +44,7 @@ Describe your data in natural language and Claude runs the right skill —
 
 ```
 /plugin marketplace add chanikyu/SciCo-Skills
-/plugin install SciCo-Skills
+/plugin install scico-skills
 ```
 
 Full setup on the [Installation](https://github.com/chanikyu/SciCo-Skills/wiki/Installation) page.

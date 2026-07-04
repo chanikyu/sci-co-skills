@@ -1,0 +1,14 @@
+{
+  "name": "scico-skills",
+  "owner": {
+    "name": "chanikyu"
+  },
+  "description": "SciCo-Skills — Claude Code skills for scientific research & publication: microbiome (amplicon, shotgun), genomics (isolate genome, strain-typing, AMR), transcriptomics (bulk & meta RNA-seq), publication figures, and an autonomous bioinformatics tool-builder.",
+  "plugins": [
+    {
+      "name": "scico-skills",
+      "source": "./",
+      "description": "A collection of Claude Code skills for scientific research and publication (microbiome, genomics, transcriptomics, figures, tool-building)."
+    }
+  ]
+}

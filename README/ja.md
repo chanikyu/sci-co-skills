@@ -44,7 +44,7 @@
 
 ```
 /plugin marketplace add chanikyu/SciCo-Skills
-/plugin install SciCo-Skills
+/plugin install scico-skills
 ```
 
 詳しいセットアップは [Installation](https://github.com/chanikyu/SciCo-Skills/wiki/Installation) ページをご覧ください。
