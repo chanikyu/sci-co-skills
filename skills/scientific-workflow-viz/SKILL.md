@@ -42,19 +42,22 @@ arrow rules explicitly** as an `ARROWS:` line in the prompt — don't leave arro
 
 - **Single global flow direction (the #1 rule)** — pick ONE reading direction for the whole figure
   (everything **left→right**, or everything **top→bottom**) and state that **every arrow points that
-  way; none ever points backward (up / left / return)**. A backward or ambiguous arrow means the
-  *topology* is wrong for the layout, not the arrow — **fix the topology** (collapse the fork, or feed
-  the next step directly), don't bend an arrow back. This — not arrow thickness — is what makes a
-  workflow read as "which way does this even go?".
+  way; none ever points backward (up / left / return)**. Forks and merges are completely fine — a
+  backward or ambiguous arrow just means a node is in the **wrong position** for that flow; **move the
+  node**, don't bend the arrow. This — not arrow thickness — is what makes a workflow read as "which
+  way does this even go?".
 - **One arrow style, stated once** — "flat solid arrows, uniform thickness, a single clean arrowhead";
   say **all** arrows use it. Don't mix big block/chevron arrows with thin arrows at random.
 - **No block / chevron / tapered arrows** — these are what read as "weird". Say **every** arrow is the
   same **thin** flat arrow. Do NOT ask for a "larger main-spine arrow" — models turn that into fat black chevrons.
 - **Exactly one of each node** — "each box appears once; NEVER duplicate a box to route a connection."
   A duplicated node (e.g. two "abundance table" boxes) is the classic sign the model couldn't route a merge.
-- **Avoid merges / re-convergence** — where two branches rejoin, **delete the intermediate merge box**
-  and have each branch feed the shared next step directly with **two short straight arrows**; never add a
-  node that then needs long bent connectors.
+- **Position forks & merges precisely (this is the real fix)** — branching and re-joining are normal;
+  the trick is WHERE the node sits. State exactly **where the fork splits** and **where its branches
+  re-join**, and place the **single merge node at the convergence point so BOTH branches reach it with
+  short forward arrows** — e.g. centered just below both branches (top→bottom flow), or in a shared
+  column at both branches' right ends (left→right flow). The model only duplicates a node (two
+  "abundance table" boxes) when you leave its position implicit — pin it down.
 - **Straight, not bent** — forbid curved / elbow / S-shaped / diagonal connectors between distant
   panels (they tangle). "Arrows are strictly horizontal or vertical."
 - **Neutral color** — connectors are **dark-grey** by default; color an arrow **only** to mark a fork,
@@ -65,7 +68,7 @@ arrow rules explicitly** as an `ARROWS:` line in the prompt — don't leave arro
 - **One arrow per connection**, centered on panel edges; no double-heads unless truly bidirectional.
 
 Example line to include verbatim:
-`ARROWS: every connector is the SAME thin flat dark-grey arrow with one arrowhead, strictly horizontal or vertical — NO curved/elbow/diagonal arrows and NO wide block/chevron/tapered arrows anywhere. Each box appears exactly once (never duplicate a node to route a line). Where two branches rejoin, both send a short straight arrow into the shared next step — do not draw a separate merge box. Only the two fork arrows may take their track colors; all others dark-grey.`
+`ARROWS: every connector is the SAME thin flat dark-grey arrow with one arrowhead, strictly horizontal or vertical — NO curved/elbow/diagonal arrows and NO wide block/chevron/tapered arrows anywhere. Each box appears exactly once (never duplicate a node to route a line). Forks and merges are allowed but POSITIONED so every arrow flows forward: state where the fork splits and place ONE merge node at the point where both branches reach it with short straight arrows (never duplicate that node). Only the two fork arrows may take their track colors; all others dark-grey.`
 
 ## Output rules
 
