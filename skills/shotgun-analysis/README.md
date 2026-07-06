@@ -10,16 +10,9 @@ reuse **[scientific-data-viz](../scientific-data-viz)**.
 
 ## Pipeline
 
-```
-raw FASTQ ─(fastp QC + host removal[optional, Bowtie2])→ clean reads
-clean reads ┬─ READ track (default): MetaPhlAn | Kraken2+Bracken → species × samples abundance
-            │                        (+ optional HUMAnN → pathway / gene-family abundance)
-            └─ ASSEMBLY track: MEGAHIT|metaSPAdes → map → bin (MetaBAT2 + CONCOCT + SemiBin2
-                               → DAS_Tool consensus) → CheckM2 QC → GTDB-Tk taxonomy → CoverM
-                               → MAG × samples abundance
-abundance table (taxa OR MAGs) → CORE (reused): preprocess → alpha → beta (PCoA, PERMANOVA)
-                               → differential abundance → tables/ images/ script/ logs/ report.md
-```
+<p align="center">
+<img src="../../assets/shotgun-workflow.png" width="90%" alt="shotgun-analysis pipeline: QC → read-based / assembly-based tracks → shared community-analysis core → output"/>
+</p>
 
 ## 🤖 Use it in Claude
 
