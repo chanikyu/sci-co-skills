@@ -37,6 +37,24 @@ recovered**), **B** contig sizes, **C** assembly vs reference (matching GC). Cod
 <img src="../../assets/genome-example.png" width="96%" alt="genome-analysis result: assembly contiguity, contig sizes, assembly vs reference (matching GC)"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/genome-analysis")
+import pipeline
+pipeline.run(
+    input_path="reads/",          # FASTQ dir / contigs FASTA / genome (stage auto-detected)
+    out_dir="results",
+    assembler="spades",           # short-read assembler (long/hybrid also supported)
+    long_reads=None,              # path to long reads to enable hybrid assembly
+    annotator="bakta",            # or "prokka"
+    speciesid="gtdbtk",           # or "fastani"
+    threads=8,
+)
+```
+
 ## ⚠️ Before you run — cautions
 
 - **Databases are large and user-provided:** **GTDB-Tk ~100 GB**, Bakta ~30–70 GB, CheckM2

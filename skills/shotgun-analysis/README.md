@@ -37,6 +37,23 @@ abundance by species. Code-rendered exactly through `scientific-data-viz`; the i
 <img src="../../assets/shotgun-example.png" width="96%" alt="shotgun-analysis result: species composition, alpha, beta PCoA with PERMANOVA and ellipses, differential abundance by species"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/shotgun-analysis")
+import pipeline
+pipeline.run(
+    input_path="abundance.tsv",   # FASTQ dir / abundance table / distance matrix / alpha table
+    metadata="metadata.csv",      # sample_id + group column
+    group_col="group",
+    out_dir="results",
+    profiler="metaphlan",         # read track: "metaphlan" or "kraken2"
+    track="read",                 # or "assembly"
+)
+```
+
 ## ⚠️ Before you run — cautions
 
 - **Databases are large and user-provided.** Download them yourself and pass the paths — the

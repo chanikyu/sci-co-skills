@@ -32,6 +32,28 @@ taxa–metabolite block is visible), **C** Procrustes + Mantel concordance. Code
 <img src="../../assets/microbiome-multiomics-example.png" width="96%" alt="microbiome-multiomics-analysis result: PERMANOVA per omic, cross-omic correlation heatmap, Procrustes concordance"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/microbiome-multiomics-analysis")
+import pipeline
+pipeline.run(
+    omics={                       # one table per omic (samples x features)
+        "microbiome": "genus.csv",
+        "metabolome": "metabolites.csv",
+    },
+    metadata="metadata.csv",      # sample_id + group column
+    group_col="group",
+    out_dir="results",
+    min_overlap=8,                # min shared samples required across omics
+    top_n=200,                    # features kept per omic for integration
+    do_mofa=False,                # True to add MOFA+ latent factors
+    do_plsda=False,               # True to add PLS-DA
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"Integrate this metagenome + metabolome table, condition = disease."*

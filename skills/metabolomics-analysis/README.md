@@ -32,6 +32,24 @@ honest reality). Code-rendered by `scientific-data-viz`; the input is simulated 
 <img src="../../assets/metabolomics-example.png" width="96%" alt="metabolomics-analysis result: QC RSD, QC-RLSC drift correction, annotation MSI levels"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/metabolomics-analysis")
+import pipeline
+pipeline.run(
+    input_path="feature_table.csv",  # raw dir (feature detection) or feature table (stage auto-detected)
+    metadata="metadata.csv",         # sample_id + group column
+    out_dir="results",
+    platform="lc",                   # "lc" (LC-MS) or "gc" (GC-MS)
+    engine="asari",                  # LC feature-detection engine
+    mode="pos",                      # ionization mode: "pos" or "neg"
+    max_rsd=0.30,                    # drop features with QC RSD above this
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"Run metabolomics-analysis on this mzML dir, LC-MS, then annotate with this MoNA library."*

@@ -31,6 +31,25 @@ demo data.
 <img src="../../assets/microbiome-metabolome-example.png" width="96%" alt="microbiome-metabolome-analysis result: PCA, volcano, PLS-DA, VIP"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/microbiome-metabolome-analysis")
+import pipeline
+pipeline.run(
+    input_path="metabolites.csv", # samples x metabolites table
+    metadata="metadata.csv",      # sample_id + group column
+    group_col="group",
+    out_dir="results",
+    impute="halfmin",             # missing-value imputation
+    norm="pqn",                   # normalization (probabilistic quotient)
+    scale="pareto",               # scaling before multivariate stats
+    padj_thr=0.05, lfc_thr=1.0,
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"Run microbiome-metabolome-analysis on this metabolite table, group = condition."*

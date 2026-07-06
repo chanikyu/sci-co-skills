@@ -25,6 +25,22 @@ cgMLST allelic-distance clustering into outbreak clades. Code-rendered by
 <img src="../../assets/strain-typing-example.png" width="96%" alt="strain-typing result: MLST allele profiles with ST calls, cgMLST clustering dendrogram"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/strain-typing")
+import pipeline
+pipeline.run(
+    input_path="assembly.fasta",  # genome/contigs FASTA, or a directory of them
+    out_dir="results",
+    serotyper=None,               # e.g. "ectyper"/"seqsero2"/"sistr" to add serotyping
+    cgmlst_scheme=None,           # cgMLST scheme name to add core-genome MLST
+    threads=4,
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"MLST-type these assemblies."*

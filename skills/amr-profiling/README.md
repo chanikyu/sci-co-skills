@@ -28,6 +28,22 @@ identity of the hit. Code-rendered by [scientific-data-viz](../scientific-data-v
 <img src="../../assets/amr-profiling-example.png" width="96%" alt="amr-profiling result: resistome heatmap by drug class, virulence and plasmid presence"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/amr-profiling")
+import pipeline
+pipeline.run(
+    input_path="assembly.fasta",  # genome/contigs FASTA, or a directory of them
+    out_dir="results",
+    organism=None,                # e.g. "Escherichia"/"Salmonella" for organism-specific AMR calls
+    amrfinder_db=None,            # prebuilt AMRFinderPlus DB path (else tool default)
+    threads=4,
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"Screen these assemblies for AMR, virulence, and plasmids."*

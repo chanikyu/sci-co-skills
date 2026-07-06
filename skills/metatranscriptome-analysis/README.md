@@ -32,6 +32,25 @@ PCoA + PERMANOVA, 95% ellipses), **D** differential expression by pathway. Code-
 <img src="../../assets/metatranscriptome-example.png" width="96%" alt="metatranscriptome-analysis result: pathway composition, alpha, beta PCoA, differential by pathway"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/metatranscriptome-analysis")
+import pipeline
+pipeline.run(
+    input_path="reads/",          # FASTQ dir / abundance table (stage auto-detected)
+    metadata="metadata.csv",      # sample_id + condition column
+    condition="condition",
+    out_dir="results",
+    profiler="humann",            # functional/taxonomic profiler
+    da_method="clr_test",         # differential abundance test
+    metric="braycurtis",          # beta-diversity distance
+    threads=4,
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"metatranscriptome-analysis on this HUMAnN pathabundance table, condition = disease."*

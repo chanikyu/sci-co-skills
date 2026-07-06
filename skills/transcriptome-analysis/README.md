@@ -27,6 +27,26 @@ exactly by `scientific-data-viz`; the input is simulated demo data.
 <img src="../../assets/transcriptome-example.png" width="96%" alt="transcriptome-analysis result: PCA, volcano, heatmap"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/transcriptome-analysis")
+import pipeline
+pipeline.run(
+    input_path="reads/",          # FASTQ dir / count matrix (stage auto-detected)
+    metadata="metadata.csv",      # sample_id + condition column
+    condition="condition",
+    out_dir="results",
+    aligner="salmon",             # quantifier (e.g. salmon)
+    ref_level=None,               # baseline/control level of the condition
+    min_count=10,                 # low-count gene filter
+    padj_thr=0.05, lfc_thr=1.0,
+    threads=4,
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"Run transcriptome-analysis on this count matrix, condition = treatment."*

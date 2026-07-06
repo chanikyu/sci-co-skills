@@ -32,6 +32,25 @@ the input is simulated demo data.
 <img src="../../assets/virome-example.png" width="96%" alt="virome-analysis result: CheckV quality tiers, vOTU richness, Jaccard PCoA, differential vOTUs"/>
 </p>
 
+## Run it directly (Python)
+
+The skill runs this for you; you can also run it yourself:
+
+```python
+import sys; sys.path.insert(0, "skills/virome-analysis")
+import pipeline
+pipeline.run(
+    input_path="contigs.fasta",   # contigs FASTA / vOTU abundance table (stage auto-detected)
+    metadata="metadata.csv",      # sample_id + group column
+    group_col="group",
+    out_dir="results",
+    reads_dir="reads/",           # required at the contigs stage (maps reads for vOTU abundance)
+    min_score=0.7,                # geNomad viral-score cutoff
+    da_method="clr_test",         # differential abundance test
+    metric="braycurtis",          # beta-diversity distance
+)
+```
+
 ## 🤖 Use it in Claude
 
 > *"virome-analysis on these contigs — geNomad → CheckV → vOTUs → map these reads → differential by group."*
