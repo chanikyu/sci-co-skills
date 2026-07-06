@@ -35,6 +35,27 @@ The layout is **flexible** — do NOT force a fixed 3-panel structure. Choose th
 - **Mechanism / network** — nodes + labeled arrows (e.g. T → M → Y mediation, cross-feeding handoff).
 - **Hybrid** — e.g. a core pipeline with an optional branch, or a panel that itself contains a sub-diagram.
 
+## Arrows & flow (keep connectors clean — the #1 thing AI tools render messy)
+
+Mixed, bent, or randomly-colored arrows are what make an AI-rendered workflow look off. **State the
+arrow rules explicitly** as an `ARROWS:` line in the prompt — don't leave arrows to the model:
+
+- **One arrow style, stated once** — "flat solid arrows, uniform thickness, a single clean arrowhead";
+  say **all** arrows use it. Don't mix big block/chevron arrows with thin arrows at random.
+- **At most two tiers, by role** — one slightly-larger arrow for the **main spine** (INPUT → … →
+  OUTPUT) and a thinner one for steps **inside** a panel. Define both so the model doesn't invent a third.
+- **Straight, not bent** — forbid curved / elbow / S-shaped / diagonal connectors between distant
+  panels (they tangle). "Arrows are strictly horizontal or vertical."
+- **Neutral color** — connectors are **dark-grey** by default; color an arrow **only** to mark a fork,
+  and then say so ("the two fork arrows take their track colors; every other arrow is dark-grey").
+- **Lay panels so arrows CAN be straight** — reading order in a single row, or a **serpentine**
+  (row 1 left→right, row 2 right→left). A long **bent "return" connector is a layout smell** — re-order
+  the panels instead of bending an arrow back across the figure.
+- **One arrow per connection**, centered on panel edges; no double-heads unless truly bidirectional.
+
+Example line to include verbatim:
+`ARROWS: every connector is a flat solid dark-grey arrow, uniform thickness, one arrowhead, strictly horizontal or vertical (NO curves, elbows, or diagonals); one slightly-larger arrow for the main INPUT->OUTPUT spine, thinner arrows within panels; only the two fork arrows take their track colors, all others dark-grey. Lay panels as a serpentine so no arrow bends back across the figure.`
+
 ## Output rules
 
 - Emit the prompt in a **plain code block (no `>` blockquote)** so it copies cleanly.

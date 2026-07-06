@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.8.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.9.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -31,6 +31,7 @@ resultados científicos **renderizados por código, exactos y honestos** (divers
 |---|---|
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | Pipeline de microbioma 16S/ITS — FASTQ (DADA2) o tabla de features → preprocesado → diversidad alfa y beta (distancia, PCoA, PERMANOVA) → abundancia diferencial — con figuras de revista. Entra en cualquier etapa; basado en scikit-bio; reutiliza scientific-data-viz. |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | Metagenómica shotgun — QC + eliminación del hospedador → perfilado basado en lecturas (MetaPhlAn / Kraken2+Bracken, HUMAnN) o MAGs basados en ensamblaje (MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → diversidad y abundancia diferencial. Reutiliza el núcleo de amplicon-analysis. |
+| 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | Viroma / fagos a partir de un metagenoma — identificación viral con geNomad → QC con CheckV → vOTUs (95% ANI/85% AF) → abundancia con CoverM (amplitud de cobertura ≥75%) → diversidad y abundancia diferencial. Reutiliza el núcleo de amplicon-analysis; se apoya en el ensamblaje de shotgun. |
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | Backbone de genoma de aislado bacteriano — FASTQ o contigs → QC → ensamblaje (SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → QC del ensamblaje (QUAST, CheckM2) → anotación (Bakta/Prokka) → identificación de especie (GTDB-Tk/ANI). Entra en cualquier etapa. |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | Tipificación de cepas de genomas ensamblados — tipo de secuencia MLST (mlst), serotipado opcional (SISTR/ECTyper) y cgMLST (chewBBACA). |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | Cribado de genomas ensamblados para genes de AMR, factores de virulencia y replicones de plásmidos — AMRFinderPlus + abricate (CARD/ResFinder, VFDB, PlasmidFinder). |

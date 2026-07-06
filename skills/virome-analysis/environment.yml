@@ -1,0 +1,27 @@
+# One conda environment for the virome pipeline (identification + QC + mapping + core).
+# Create once, then the skill runs via `conda run -n scico-virome`:
+#   conda env create -f environment.yml
+#
+name: scico-virome
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  # --- viral identification + QC + mapping (need user-downloaded DBs) ---
+  - genomad            # viral contig identification + taxonomy (DB ~1.4 GB)
+  - checkv             # completeness / contamination + provirus excision (DB ~10 GB)
+  - blast              # all-vs-all ANI for dereplication (megablast + anicalc)
+  - coverm             # read mapping -> vOTU coverage (rpkm + covered_fraction)
+  - bowtie2
+  - seqkit
+  # --- core: diversity + differential abundance + figures (reused from amplicon-analysis) ---
+  - scikit-bio
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  # optional (heavy / on demand):
+  #   - virsorter2        # alternative identifier
+  #   - iphop             # host prediction (DB ~40 GB) — off by default
+  #   - bacphlip          # lytic / lysogenic lifestyle
