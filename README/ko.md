@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.9.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.10.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -32,6 +32,7 @@
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS 마이크로바이옴 파이프라인 — FASTQ(DADA2) 또는 feature table → 전처리 → 알파·베타 다양성(거리, PCoA, PERMANOVA) → 차등 존재비 — 저널 그림까지. 어느 단계로도 진입 가능; scikit-bio 기반; scientific-data-viz 재사용. |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | 샷건 메타지노믹스 — QC + 호스트 제거 → 리드 기반 프로파일링(MetaPhlAn / Kraken2+Bracken, HUMAnN) 또는 어셈블리 기반 MAG(MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → 다양성 & 차등 존재비. amplicon-analysis 코어 재사용. |
 | 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | 메타지놈에서 바이롬 / 파지 분석 — geNomad 바이러스 동정 → CheckV QC → vOTU(95% ANI / 85% AF) → CoverM 존재비(breadth ≥75%) → 다양성 & 차등. amplicon-analysis 코어를 재사용하고, shotgun 어셈블리 위에서 동작. |
+| 💊 [resistome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/resistome-analysis) | 메타지놈의 리드로부터 얻는 레지스톰 / 군집 수준 AMR — ARG 검출(RGI/CARD, DeepARG, AMR++/MEGARes) → hAMRonization → 정규화(RPKM + 세포당) → 약물 계열별 집계 → ARG × 샘플 → 다양성 & 차등 분석. amplicon-analysis 코어를 재사용합니다(단일 분리균주 대상 amr-profiling과 대비). |
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | 세균 분리균주 유전체 백본 — FASTQ 또는 contigs → QC → 조립(SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → 조립 QC(QUAST, CheckM2) → 주석(Bakta/Prokka) → 종 동정(GTDB-Tk/ANI). 어느 단계로도 진입. |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | 조립 유전체 균주 타이핑 — MLST sequence type(mlst), 선택적 serotyping(SISTR/ECTyper) 및 cgMLST(chewBBACA). |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | 조립 유전체에서 AMR 유전자·병원성 인자·플라스미드 replicon 스크리닝 — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder). |

@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.9.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.10.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -32,6 +32,7 @@
 | 🧬 [amplicon-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/amplicon-analysis) | 16S/ITS マイクロバイオームパイプライン — FASTQ(DADA2)または feature table → 前処理 → α・β多様性(距離, PCoA, PERMANOVA) → 差次的存在量 — ジャーナル図まで。任意のステージから開始可能; scikit-bio ベース; scientific-data-viz を再利用。 |
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | ショットガンメタゲノミクス — QC + 宿主除去 → リードベースのプロファイリング(MetaPhlAn / Kraken2+Bracken, HUMAnN)またはアセンブリベースの MAG(MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → 多様性 & 差次的存在量。amplicon-analysis のコアを再利用。 |
 | 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | メタゲノムからのウイルス叢／ファージ — geNomad によるウイルス同定 → CheckV QC → vOTUs(95% ANI/85% AF) → CoverM 存在量(breadth ≥75%) → 多様性 & 差次的存在量。amplicon-analysis のコアを再利用し、shotgun のアセンブリを土台にする。 |
+| 💊 [resistome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/resistome-analysis) | メタゲノムのリードから得るレジストーム／群集の AMR — ARG 検出(RGI/CARD, DeepARG, AMR++/MEGARes) → hAMRonization → 正規化(RPKM + per-cell) → 薬剤クラスへの集約 → ARG × サンプル → 多様性・示差解析。amplicon-analysis のコアを再利用(単一分離株向けの amr-profiling とは対照的)。 |
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | 細菌分離株ゲノムのバックボーン — FASTQ または contigs → QC → アセンブリ(SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → アセンブリQC(QUAST, CheckM2) → アノテーション(Bakta/Prokka) → 菌種同定(GTDB-Tk/ANI)。任意のステージから開始可能。 |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | アセンブリゲノムの株タイピング — MLST sequence type(mlst)、オプションで serotyping(SISTR/ECTyper)と cgMLST(chewBBACA)。 |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | アセンブリゲノムから AMR遺伝子・ビルレンス因子・プラスミドレプリコンをスクリーニング — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |

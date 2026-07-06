@@ -1,0 +1,22 @@
+# One conda environment for the metagenomic resistome pipeline (ARG detection + core).
+# Create once, then the skill runs via `conda run -n scico-resistome`:
+#   conda env create -f environment.yml
+#
+name: scico-resistome
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  # --- ARG detection + harmonization (needs DBs; DeepARG models are bundled) ---
+  - deeparg            # deep-learning ARG detection from short reads (models bundled — no external DB)
+  - hamronization      # harmonize different ARG tools' outputs into one standard table
+  # --- core: normalization + aggregation + diversity + differential + figures (reused) ---
+  - scikit-bio
+  - matplotlib
+  - numpy
+  - scipy
+  - pandas
+  # optional (on demand):
+  #   - rgi              # RGI bwt against CARD (~200 MB DB; academic / non-commercial)
+  #   - amrplusplus      # AMR++ against MEGARes (redistributable)
