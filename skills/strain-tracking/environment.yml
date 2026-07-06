@@ -1,0 +1,25 @@
+# One conda environment for metagenomic strain-tracking (profiling + sharing/persistence core).
+# Create once, then the skill runs via `conda run -n scico-straintrack`:
+#   conda env create -f environment.yml
+#
+name: scico-straintrack
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  # --- per-sample strain profiling (needs DBs; StrainPhlAn ships with MetaPhlAn) ---
+  - metaphlan          # MetaPhlAn 4 + StrainPhlAn (marker-based, reference-free default; marker DB ~15 GB)
+  - bowtie2
+  - samtools
+  # --- sharing network + persistence + distance-matrix core + figures ---
+  - networkx           # strain-sharing graph
+  - scikit-bio         # distance-matrix ordination (reused from amplicon-analysis)
+  - scipy
+  - numpy
+  - pandas
+  - matplotlib
+  # optional (on demand):
+  #   - instrain         # popANI reference/MAG-based strain comparison (needs a genome/MAG Bowtie2 index)
+  #   - midas2           # pan-genome SNV strain profiling (UHGG DB ~93 GB)
+  #   - dendropy         # phylogenetic tree / distance handling

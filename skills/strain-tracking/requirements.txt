@@ -1,0 +1,10 @@
+# strain-tracking uses conda (see environment.yml) — the profilers (StrainPhlAn/MetaPhlAn, inStrain,
+# MIDAS2) are not cleanly on PyPI. Python-only deps for the testable core + reused downstream:
+networkx>=3.0
+scikit-bio>=0.6
+scipy>=1.10
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.8
+# same-strain calls (share.py) + persistence (persist.py) are pure Python (numpy/pandas/networkx).
+# Reuses sibling skills amplicon-analysis (PCoA/PERMANOVA) + scientific-data-viz (figures).

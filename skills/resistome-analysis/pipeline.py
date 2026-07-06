@@ -9,11 +9,19 @@ import sys
 import datetime
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_AMP = os.path.join(_HERE, "..", "amplicon-analysis")
-_SDV = os.path.join(_HERE, "..", "scientific-data-viz")
-for p in (_HERE, _AMP, _SDV):
+_AMP = os.path.abspath(os.path.join(_HERE, "..", "amplicon-analysis"))
+_SDV = os.path.abspath(os.path.join(_HERE, "..", "scientific-data-viz"))
+for p in (_AMP, _SDV):                  # siblings: lower priority so this skill's own modules win
     if p not in sys.path:
-        sys.path.insert(0, p)
+        sys.path.append(p)
+if _HERE in sys.path:                   # this skill's dir must resolve its own stages/runners first
+    sys.path.remove(_HERE)
+sys.path.insert(0, _HERE)
+for _m in ("stages", "runners"):        # evict a sibling skill's same-named module (e.g. amplicon's stages)
+    _cached = sys.modules.get(_m)
+    if _cached is not None and getattr(_cached, "__file__", None) and \
+            os.path.dirname(os.path.abspath(_cached.__file__)) != _HERE:
+        del sys.modules[_m]
 
 import pandas as pd
 import journal_style as J

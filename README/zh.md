@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.10.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.11.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -33,6 +33,7 @@
 | 🦠 [shotgun-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/shotgun-analysis) | 鸟枪法宏基因组 — QC + 宿主去除 → 基于读长的分析(MetaPhlAn / Kraken2+Bracken, HUMAnN)或基于组装的 MAG(MEGAHIT → MetaBAT2 + CONCOCT + SemiBin2 → DAS_Tool, CheckM2, GTDB-Tk) → 多样性 & 差异丰度。复用 amplicon-analysis 核心。 |
 | 👾 [virome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/virome-analysis) | 从宏基因组中恢复病毒组 / 噬菌体 — geNomad 病毒鉴定 → CheckV 质控 → vOTUs(95% ANI/85% AF) → CoverM 丰度(广度 ≥75%) → 多样性 & 差异丰度。复用 amplicon-analysis 核心; 基于 shotgun 组装。 |
 | 💊 [resistome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/resistome-analysis) | 从宏基因组读长中分析抗性组 / 群落 AMR — ARG 检测(RGI/CARD、DeepARG、AMR++/MEGARes) → hAMRonization → 归一化(RPKM + 每细胞) → 按药物类别汇总 → ARG × 样本 → 多样性 & 差异分析。复用 amplicon-analysis 核心(与针对单一分离株的 amr-profiling 相对)。 |
+| 🧭 [strain-tracking](https://github.com/chanikyu/SciCo-Skills/wiki/strain-tracking) | 在宏基因组队列中追踪菌株 —— 同株共享 / 传播 / 持留：逐样本分型（StrainPhlAn 4；inStrain popANI ≥99.999%）→ 各物种菌株距离矩阵 → 共享网络 + 纵向持留。面向宏基因组队列（与针对单一分离株的 strain-typing 相对）。 |
 | 🔬 [genome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/genome-analysis) | 细菌分离株基因组主流程 — FASTQ 或 contigs → QC → 组装(SPAdes/Unicycler/Shovill/SKESA/Flye/Canu/Raven) → 组装质控(QUAST, CheckM2) → 注释(Bakta/Prokka) → 物种鉴定(GTDB-Tk/ANI)。可从任意阶段进入。 |
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | 组装基因组的菌株分型 — MLST sequence type(mlst),可选 serotyping(SISTR/ECTyper)与 cgMLST(chewBBACA)。 |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | 在组装基因组中筛查 AMR 基因、毒力因子与质粒 replicon — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
