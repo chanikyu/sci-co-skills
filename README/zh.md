@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.7.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.8.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -36,6 +36,7 @@
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | 在组装基因组中筛查 AMR 基因、毒力因子与质粒 replicon — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | 批量 RNA-seq — FASTQ 或 count matrix → QC → 定量(Salmon/kallisto/STAR，--aligner) → 差异表达(pydeseq2) → 富集分析，含 PCA/volcano/heatmap。可从任意阶段进入。 |
 | 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群落 RNA-seq — QC + 宿主去除 → rRNA 去除(SortMeRNA) → 功能(HUMAnN)与分类(MetaPhlAn)分析(活性群落) → 多样性 & 差异丰度。复用 shotgun + amplicon 核心。 |
+| ⚛️ [metabolomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metabolomics-analysis) | 代谢组学上游 — 原始 LC-MS/GC-MS(mzML/.CDF) → 特征检测(asari/XCMS · eRah/MS-DIAL) → 对齐 → 质控(RSD, QC-RLSC 漂移) → 注释(matchms, MSI 级别) → 已注释特征表。衔接至 microbiome-metabolome-analysis。 |
 | ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | 从已注释特征表出发的代谢组学 — 过滤/插补 → PQN → log+Pareto → 单变量(BH-FDR, 火山图) → PCA / PLS-DA + VIP + 置换检验 → 热图; 可选通路 ORA。 |
 | 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | 整合配对的宏基因组 + 宏转录组 + 代谢组 — 各组学 CLR/log → PERMANOVA → 跨组学 Spearman 网络(BH-FDR) → Procrustes/Mantel 一致性; 可选 MOFA+。 |
 | 📊 [scientific-data-viz](https://github.com/chanikyu/SciCo-Skills/wiki/scientific-data-viz) | 从真实数据生成可发表的期刊级图表——由代码渲染，因此每个数值都精确无误。20 种配色方案、图例置于图外、可选统计检验（t / ANOVA / Mann–Whitney / Kruskal / 相关性 / log-rank / **PERMANOVA**），并输出结构化的 `images/` + `script/`。 |

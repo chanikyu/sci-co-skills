@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.7.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.8.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -35,6 +35,7 @@
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | アセンブリゲノムの株タイピング — MLST sequence type(mlst)、オプションで serotyping(SISTR/ECTyper)と cgMLST(chewBBACA)。 |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | アセンブリゲノムから AMR遺伝子・ビルレンス因子・プラスミドレプリコンをスクリーニング — AMRFinderPlus + abricate(CARD/ResFinder, VFDB, PlasmidFinder)。 |
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | バルク RNA-seq — FASTQ または count matrix → QC → 定量(Salmon/kallisto/STAR、--aligner) → 差次的発現(pydeseq2) → エンリッチメント、PCA/volcano/heatmap。任意のステージから開始可能。 |
+| ⚛️ [metabolomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metabolomics-analysis) | メタボロミクスのアップストリーム — raw LC-MS/GC-MS（mzML/.CDF）→ 特徴量検出（asari/XCMS · eRah/MS-DIAL）→ アライメント → QC（RSD、QC-RLSC ドリフト）→ アノテーション（matchms、MSI レベル）→ アノテーション済み feature table。microbiome-metabolome-analysis へ引き渡す。 |
 | 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | 群集 RNA-seq — QC + 宿主除去 → rRNA除去(SortMeRNA) → 機能(HUMAnN)・分類(MetaPhlAn)プロファイリング(活性群集) → 多様性 & 差次的存在量。shotgun+amplicon のコアを再利用。 |
 | ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | アノテーション済み feature table からのメタボロミクス — フィルタリング/欠測値補完 → PQN → log+Pareto → 単変量解析(BH-FDR, volcano) → PCA / PLS-DA + VIP + 並べ替え検定 → ヒートマップ; オプションでパスウェイ ORA。 |
 | 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | ペアリングされたメタゲノム + メタトランスクリプトーム + メタボロームを統合 — オミクスごとの CLR/log → PERMANOVA → オミクス間 Spearman ネットワーク(BH-FDR) → Procrustes/Mantel 一致性; オプションで MOFA+。 |

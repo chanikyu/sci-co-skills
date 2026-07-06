@@ -1,0 +1,26 @@
+# One conda environment for the metabolomics upstream pipeline.
+# Create once, then the skill runs via `conda run -n scico-metabolomics`:
+#   conda env create -f environment.yml
+#
+name: scico-metabolomics
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  # --- annotation + QC + IO (Python-native) ---
+  - matchms            # MS2 / EI spectral matching (annotation)
+  - pymzml             # mzML reading
+  - pyteomics          # MS file IO
+  - statsmodels        # QC-RLSC (LOESS)
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib         # figures (reuse scientific-data-viz)
+  - pip
+  - pip:
+      - asari-metabolomics   # LC-MS feature detection (pure Python)
+      - RIAssigner           # GC-MS retention index
+# On demand (heavy, install only when that engine is chosen):
+#   conda install -n scico-metabolomics bioconda::r-xcms   # XCMS engine (LC-MS, publication-grade)
+#   MS-DIAL / eRah (GC-MS deconvolution), SIRIUS (in-silico), ProteoWizard msconvert (vendor raw -> mzML)

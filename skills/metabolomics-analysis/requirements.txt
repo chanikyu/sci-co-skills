@@ -1,0 +1,14 @@
+# Metabolomics upstream (see environment.yml for the conda env). Python-native deps:
+matchms>=0.24        # MS2 / EI spectral matching (annotation)
+asari-metabolomics   # LC-MS feature detection
+pymzml>=2.5
+pyteomics>=4.6
+RIAssigner           # GC-MS retention index
+statsmodels>=0.14    # QC-RLSC (LOESS drift correction)
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.8
+# External (not PyPI; installed on demand): XCMS (r-xcms), MS-DIAL / eRah (GC-MS deconvolution),
+# SIRIUS (in-silico annotation), ProteoWizard msconvert (vendor raw -> mzML).
+# Reuses sibling skill scientific-data-viz for figures; hands off to microbiome-metabolome-analysis.

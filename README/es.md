@@ -10,7 +10,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Claude%20Code-Skills-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skills">
-  <img src="https://img.shields.io/badge/version-1.7.0-1f77b4?style=for-the-badge" alt="version">
+  <img src="https://img.shields.io/badge/version-1.8.0-1f77b4?style=for-the-badge" alt="version">
   <img src="https://img.shields.io/badge/license-MIT-2ca02c?style=for-the-badge" alt="MIT">
   <img src="https://img.shields.io/badge/python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python">
   <a href="https://github.com/chanikyu/SciCo-Skills/wiki"><img src="https://img.shields.io/badge/docs-Wiki-4DBBD5?style=for-the-badge&logo=github&logoColor=white" alt="Wiki"></a>
@@ -35,6 +35,7 @@ resultados científicos **renderizados por código, exactos y honestos** (divers
 | 🏷️ [strain-typing](https://github.com/chanikyu/SciCo-Skills/wiki/strain-typing) | Tipificación de cepas de genomas ensamblados — tipo de secuencia MLST (mlst), serotipado opcional (SISTR/ECTyper) y cgMLST (chewBBACA). |
 | 🛡️ [amr-profiling](https://github.com/chanikyu/SciCo-Skills/wiki/amr-profiling) | Cribado de genomas ensamblados para genes de AMR, factores de virulencia y replicones de plásmidos — AMRFinderPlus + abricate (CARD/ResFinder, VFDB, PlasmidFinder). |
 | 📈 [transcriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/transcriptome-analysis) | RNA-seq masivo (bulk) — FASTQ o matriz de conteos → QC → cuantificación (Salmon/kallisto/STAR vía --aligner) → expresión diferencial (pydeseq2) → enriquecimiento, con PCA / volcano / heatmap. Entra en cualquier etapa. |
+| ⚛️ [metabolomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metabolomics-analysis) | Metabolómica upstream — LC-MS/GC-MS crudo (mzML/.CDF) → detección de features (asari/XCMS · eRah/MS-DIAL) → alineamiento → QC (RSD, deriva QC-RLSC) → anotación (matchms, niveles MSI) → tabla de features anotada. Pasa el testigo a microbiome-metabolome-analysis. |
 | 🧪 [metatranscriptome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/metatranscriptome-analysis) | RNA-seq de comunidad — QC + eliminación del hospedador → eliminación de rRNA (SortMeRNA) → perfilado funcional (HUMAnN) y taxonómico (MetaPhlAn) de la comunidad activa → diversidad y abundancia diferencial. Reutiliza el núcleo de shotgun + amplicon. |
 | ⚗️ [microbiome-metabolome-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-metabolome-analysis) | Metabolómica a partir de una tabla de features anotada — filtrado/imputación → PQN → log+Pareto → univariante (BH-FDR, volcano) → PCA / PLS-DA + VIP + permutación → heatmap; ORA de rutas opcional. |
 | 🔗 [microbiome-multiomics-analysis](https://github.com/chanikyu/SciCo-Skills/wiki/microbiome-multiomics-analysis) | Integra metagenoma + metatranscriptoma + metaboloma emparejados — CLR/log por ómica → PERMANOVA → red de Spearman inter-ómica (BH-FDR) → concordancia por Procrustes/Mantel; MOFA+ opcional. |
