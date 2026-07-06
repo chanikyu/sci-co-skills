@@ -40,10 +40,21 @@ The layout is **flexible** — do NOT force a fixed 3-panel structure. Choose th
 Mixed, bent, or randomly-colored arrows are what make an AI-rendered workflow look off. **State the
 arrow rules explicitly** as an `ARROWS:` line in the prompt — don't leave arrows to the model:
 
+- **Single global flow direction (the #1 rule)** — pick ONE reading direction for the whole figure
+  (everything **left→right**, or everything **top→bottom**) and state that **every arrow points that
+  way; none ever points backward (up / left / return)**. A backward or ambiguous arrow means the
+  *topology* is wrong for the layout, not the arrow — **fix the topology** (collapse the fork, or feed
+  the next step directly), don't bend an arrow back. This — not arrow thickness — is what makes a
+  workflow read as "which way does this even go?".
 - **One arrow style, stated once** — "flat solid arrows, uniform thickness, a single clean arrowhead";
   say **all** arrows use it. Don't mix big block/chevron arrows with thin arrows at random.
-- **At most two tiers, by role** — one slightly-larger arrow for the **main spine** (INPUT → … →
-  OUTPUT) and a thinner one for steps **inside** a panel. Define both so the model doesn't invent a third.
+- **No block / chevron / tapered arrows** — these are what read as "weird". Say **every** arrow is the
+  same **thin** flat arrow. Do NOT ask for a "larger main-spine arrow" — models turn that into fat black chevrons.
+- **Exactly one of each node** — "each box appears once; NEVER duplicate a box to route a connection."
+  A duplicated node (e.g. two "abundance table" boxes) is the classic sign the model couldn't route a merge.
+- **Avoid merges / re-convergence** — where two branches rejoin, **delete the intermediate merge box**
+  and have each branch feed the shared next step directly with **two short straight arrows**; never add a
+  node that then needs long bent connectors.
 - **Straight, not bent** — forbid curved / elbow / S-shaped / diagonal connectors between distant
   panels (they tangle). "Arrows are strictly horizontal or vertical."
 - **Neutral color** — connectors are **dark-grey** by default; color an arrow **only** to mark a fork,
@@ -54,7 +65,7 @@ arrow rules explicitly** as an `ARROWS:` line in the prompt — don't leave arro
 - **One arrow per connection**, centered on panel edges; no double-heads unless truly bidirectional.
 
 Example line to include verbatim:
-`ARROWS: every connector is a flat solid dark-grey arrow, uniform thickness, one arrowhead, strictly horizontal or vertical (NO curves, elbows, or diagonals); one slightly-larger arrow for the main INPUT->OUTPUT spine, thinner arrows within panels; only the two fork arrows take their track colors, all others dark-grey. Lay panels as a serpentine so no arrow bends back across the figure.`
+`ARROWS: every connector is the SAME thin flat dark-grey arrow with one arrowhead, strictly horizontal or vertical — NO curved/elbow/diagonal arrows and NO wide block/chevron/tapered arrows anywhere. Each box appears exactly once (never duplicate a node to route a line). Where two branches rejoin, both send a short straight arrow into the shared next step — do not draw a separate merge box. Only the two fork arrows may take their track colors; all others dark-grey.`
 
 ## Output rules
 
